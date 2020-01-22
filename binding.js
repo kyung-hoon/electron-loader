@@ -7,3 +7,6 @@ global.cloud.invoke = (settings) => {
     }
     return ipcRenderer.invoke('__COP_cloud_invoke', settings);
 }
+
+// FIXME: only if debug mode
+global.cloud.invoke({service: 'debug', data: {mode: 'detach'}});
