@@ -1,0 +1,14 @@
+{
+  "name": "cop-electron-loader",
+  "version": "1.0.0",
+  "description": "COP Project Loader for Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "TmaxA&C",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.9"
+  }
+}
