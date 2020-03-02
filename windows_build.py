@@ -34,6 +34,9 @@ package_json["build"]["win"]["icon"] = "./test_icon.ico"
 with open('package.json', 'w') as make_file:
     json.dump(package_json, make_file, ensure_ascii=False, indent=4)
 
+# install electron
+os.system("yarn add electron --dev")
+
 # make 'index.js'
 shutil.copy(ELECTRON_MAIN_JS_PATH, ELECTRON_PACKAGE_PATH)
 shutil.copy(ELECTRON_ICON_PATH , ELECTRON_PACKAGE_PATH)

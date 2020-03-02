@@ -1,9 +1,9 @@
 {
     "APP_NAME" : "test",
     
-    "USER_CODE_PATH" : "./res/test_code",
-    "ELECTRON_MAIN_JS_PATH" : "./index.js",
-    "ELECTRON_ICON_PATH" : "./res/test_icon.ico",
+    "USER_CODE_PATH" : "/home/kangdh/Desktop/electron-loader/res/test_code",
+    "ELECTRON_MAIN_JS_PATH" : "/home/kangdh/Desktop/electron-loader/index.js",
+    "ELECTRON_ICON_PATH" : "/home/kangdh/Desktop/electron-loader/res/test_icon.ico",
 
     "browserWindow_json" : {
         "width": 800,

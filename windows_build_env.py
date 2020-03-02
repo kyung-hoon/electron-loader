@@ -23,8 +23,6 @@ os.system("sudo apt update")
 os.system("sudo apt install --install-recommends winehq-stable")
 
 # install node global package
-# install electron
-os.system("yarn global add electron")
 os.system("yarn global add electron-builder")
 
 # env check
