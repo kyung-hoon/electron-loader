@@ -1,14 +1,15 @@
 {
-  "name": "cop-electron-loader",
-  "version": "1.0.0",
-  "description": "COP Project Loader for Electron",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "author": "TmaxA&C",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^7.1.9"
-  }
+    "name": "",
+    "version": "1.0.0",
+    "description": "test",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "dist": "electron-builder --windows",
+        "start": "electron ."
+    },
+    "build":{
+        "win":{      
+        }
+    }
 }
