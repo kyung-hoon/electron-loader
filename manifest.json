@@ -1,6 +1,6 @@
 {
     "projectRoot" : "../",
-    "target" : "/home/kangdh/git/electron-loader/example/electron_test",
+    "target" : "/home/kangdh/git/electron-loader/example/hello_electron",
     "platform" : "win",
     "buildType" : "debug",
     
