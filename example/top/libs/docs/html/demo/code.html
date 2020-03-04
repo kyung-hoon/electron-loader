@@ -1,0 +1,19 @@
+<top-linearlayout id="layoutDemo" controller="demoController" orientation="vertical" layout-height="100%" border-width="0px">
+    <top-linearlayout orientation="horizontal" border-width="0px">
+        <top-button text="Run" class="violet" icon="icon-lock_arrow" on-click="runDemoCode" layout-vertical-alignment="middle" margin="10px"></top-button>
+        <top-textview text="예제 코드를 수정하고 실행할 수 있습니다." text-size="15px" layout-vertical-alignment="middle" margin="10px"></top-textview>
+    </top-linearlayout>
+    <top-linearlayout orientation="horizontal" layout-height="100%" border-width="0px">
+        <top-linearlayout orientation="vertical" layout-width="calc(50% - 10px)" border-width="0px">
+            <top-panel title="Html" margin="10px">
+                <top-textarea data-model='{"text":"demoCode.html"}' layout-width="100%" rows="15"></top-textarea>
+            </top-panel>
+            <top-panel title="JavaScript" margin="10px">
+                <top-textarea data-model='{"text":"demoCode.js"}' layout-width="100%" rows="15"></top-textarea>
+            </top-panel>
+        </top-linearlayout>
+        <top-panel title="Result" layout-width="calc(50% - 10px)" margin="10px">
+            <top-linearlayout id="demoResult" border-width="0px" orientation="vertical"></top-linearlayout>
+        </top-panel>
+    </top-linearlayout>
+</top-linearlayout>

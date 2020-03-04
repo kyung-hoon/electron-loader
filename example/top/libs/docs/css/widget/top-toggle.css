@@ -1,0 +1,104 @@
+/*!
+ * top-toggle
+ */
+
+top-toggle .top-toggle-root {
+    overflow: hidden;
+    min-width: 52px;
+    min-height: 26px;
+    border-radius: 999px;
+    background-color: #4085ee;
+    position: relative;
+}
+
+top-toggle .top-toggle-root:hover,
+top-toggle .top-toggle-root:active,
+top-toggle .top-toggle-root:focus {
+    background-color: #3e75c7;
+}
+
+top-toggle .top-toggle-root input[type="checkbox"] {
+    display: none;
+}
+
+top-toggle .top-toggle-background {
+    position: absolute;
+    width: 150%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: left 0.35s;
+    -o-transition: left 0.35s;
+    transition: left 0.35s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+top-toggle .top-toggle-root.off .top-toggle-background {
+    left: -50%;
+    background-color: #f1f1f1;
+}
+
+top-toggle .top-toggle-root.off .top-toggle-background>span {
+    border: 2px solid #dfe1e5;
+}
+
+top-toggle .top-toggle-handle {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 2px solid #3e75c7;
+    border-radius: 50%;
+}
+
+top-toggle .btn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+top-toggle .btn:active {
+    background-image: none;
+    outline: 0;
+}
+
+top-toggle .btn.disabled,
+top-toggle .btn[disabled],
+top-toggle .btn fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+top-toggle.violet .top-toggle-root {
+    background-color: #8484ba;
+}
+
+top-toggle.violet .top-toggle-root:hover,
+top-toggle.violet .top-toggle-root:active,
+top-toggle.violet .top-toggle-root:focus {
+    background-color: #6a6aa6;
+}
+
+top-toggle.violet .top-toggle-handle {
+    border: 2px solid #6a6aa6;
+}
+
+top-toggle.bluegray .top-toggle-root {
+    background-color: #677e9a;
+}
+
+top-toggle.bluegray .top-toggle-root:hover,
+top-toggle.bluegray .top-toggle-root:active,
+top-toggle.bluegray .top-toggle-root:focus {
+    background-color: #4f6482;
+}
+
+top-toggle.bluegray .top-toggle-handle {
+    border: 2px solid #4f6482;
+}

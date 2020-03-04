@@ -1,0 +1,45 @@
+<script>
+    // dropdown - data model
+    var test_nodes1 = [
+        { "text": "Look,if you have"},{ "text": "One shot"},
+        { "text": "One opportunity"},{ "text": "To seize"},
+        { "text": "everything you"},{ "text": "Wanted-One moment"},
+        { "text": "Would you capture it"},{ "text": "Or just let it slip?"}
+    ];
+    
+    // floating, side, drawer - data model
+    var test_nodes2 = [
+        { text: "A class", icon: "icon-expert", children: [
+            { text: "Mr. Top" },
+            { text: "Ms. Tos" },
+            { text: "Docter. Jeus", selected: "/widgets/menu" }
+        ]}, 
+        { text: "Web Site", icon: "icon-file", children: [
+            { text: "Naver", selected: "http://www.naver.com" },
+            { text: "Google", selected: "http://www.google.com" }
+        ]}
+    ];
+    </script>
+    
+    <top-linearlayout layout-height="350px" border-width="3px">
+        <top-menu type="floating" id="test_menu1" items="test_nodes2"></top-menu>
+        <top-menu type="side" id="test_menu2" class="menu_01" items="test_nodes2" visible="none"></top-menu>
+        <top-menu type="side" id="test_menu3" class="menu_02" items="test_nodes2" visible="none"></top-menu>
+        <top-menu type="dropdown" id="test_menu4" title="Dropdown" items="test_nodes1" visible="none"></top-menu>
+        <top-menu type="drawer" id="test_menu5" items="test_nodes2" layout-height="250px" visible="none"></top-menu>
+        <top-menu type="header" id="test_menu6" margin="5px" layout-width="300px" placement="vertical" items="test_nodes2" visible="none"></top-menu>
+        <top-menu type="header" id="test_menu7" margin="5px" layout-width="300px" placement="horizontal" items="test_nodes2" visible="none"></top-menu>
+        <top-menu type="cascading" id="test_menu8" margin="5px" layout-width="300px" placement="horizontal" items="test_nodes2" visible="none"></top-menu>
+    </top-linearlayout>
+    <top-linearlayout layout-width="match_parent" layout-height="match_parent%" border-width="0px">
+        <top-button id="floatingButton" margin="10px" text="Floating Menu" on-click="changeMenuType"></top-button>
+        <top-button id="sideButton_1" margin="10px" text="Side Menu (class='menu_01')" on-click="changeMenuType"></top-button>
+        <top-button id="sideButton_2" margin="10px" text="Side Menu (class='menu_02')" on-click="changeMenuType"></top-button>
+        <top-button id="dropdownButton" margin="10px" text="Dropdown Menu" on-click="changeMenuType"></top-button>
+    </top-linearlayout>
+    <top-linearlayout layout-width="match_parent" layout-height="match_parent%" border-width="0px">
+        <top-button id="drawerButton" margin="10px" text="Drawer Menu" on-click="changeMenuType"></top-button>
+        <top-button id="headerButton_1" margin="10px" text="Header Menu (placement='vertical')" on-click="changeMenuType"></top-button>
+        <top-button id="headerButton_2" margin="10px" text="Header Menu (placement='horizontal')" on-click="changeMenuType"></top-button>
+        <top-button id="cascadingButton" margin="10px" text="Cascading Menu" on-click="changeMenuType"></top-button>
+    </top-linearlayout>

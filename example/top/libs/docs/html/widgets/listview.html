@@ -1,0 +1,42 @@
+<script>
+    var test_items = [
+        {"name":"Kim", "age":"20", "location":"Seoul"},
+        {"name":"Lee", "age":"25", "location":"Busan"},
+        {"name":"Park", "age":"30", "location":"Incheon"},
+        {"name":"Choi", "age":"35", "location":"Bundang"},
+        {"name":"Jung", "age":"40", "location":"Daegu"}
+    ];
+</script>
+<top-linearlayout orientation="vertical" border-width="0px" horizontal-alignment="center" layout-width="50%" margin="20px">
+    <top-textview text-size="20px" text="Binding Case"> </top-textview>
+    <top-listview items="test_items" margin="5px" layout-vertical-alignment="middle" layout-width="30%">
+        <top-linearlayout border-width="0px">
+            <top-textview text="{name}" margin="5px"></top-textview>
+            <top-textview text="age: " margin="5px 0px"></top-textview>
+            <top-slider number="{age}" layout-width="30%" max="100" margin="5px"></top-slider>
+            <top-textview text="{age}" margin="5px"></top-textview>
+        </top-linearlayout>
+    </top-listview>
+</top-linearlayout>
+<top-linearlayout orientation="vertical" border-width="0px" horizontal-alignment="center" layout-width="30%" margin="20px">
+    <top-textview text-size="20px" text="Binding Case 2"> </top-textview>
+    <top-listview items="test_items" margin="5px" layout-vertical-alignment="middle" layout-width="30%">
+        <top-linearlayout layout-height="35px" border-width="0px" background-color="transparent" vertical-alignment="middle">
+            <top-textview text="{name}" margin="5px"></top-textview>
+        </top-linearlayout>
+    </top-listview>
+</top-linearlayout>
+<top-linearlayout orientation="vertical" border-width="0px" horizontal-alignment="center" layout-width="50%" margin="20px">
+    <top-textview text-size="20px" text="Non-Binding(static) Case"> </top-textview>
+    <top-listview  margin="5px" layout-vertical-alignment="middle" layout-width="30%">
+        <top-widgetitem text="item1"></top-widgetitem>
+        <top-widgetitem text="item2"></top-widgetitem>
+        <top-widgetitem>
+            <top-linearlayout layout-width="100px" border-width="0">
+                <top-checkbox text="item3" margin="5px" checked="true"></top-checkbox>
+            </top-linearlayout>
+        </top-widgetitem>
+        <top-widgetitem text="item4"></top-widgetitem>
+        <top-widgetitem text="item5"></top-widgetitem>
+    </top-listview>
+</top-linearlayout>

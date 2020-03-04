@@ -1,0 +1,52 @@
+/*!
+ * top-progressbar_ie
+ */
+top-progressbar .top-progressbar-progress {
+    box-sizing: border-box;
+}
+
+top-progressbar .top-progressbar-progress[value] {
+    overflow: hidden;
+    background-color: #f4f9ff;
+    border: 1px solid #275cb9;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+top-progressbar .top-progressbar-progress::-ms-fill {
+    appearance: none;
+    float: left;
+    width: 0%;
+    text-align: center;
+    background-color: #4085ee;
+    border-radius: 10px;
+    border-width: 0px;
+    box-sizing: border-box;
+}
+
+top-progressbar .top-progressbar-progress:not([value])::-ms-fill {
+    animation-name: none;
+}
+
+top-progressbar.striped progress::-ms-fill {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+top-progressbar.violet .top-progressbar-progress::-ms-fill {
+    background-color: #8484ba;
+}
+
+top-progressbar.violet .top-progressbar-progress[value] {
+    border-color: #6a6aa6;
+}
+
+top-progressbar.bluegray .top-progressbar-progress::-ms-fill {
+    background-color: #677e9a;
+}
+
+top-progressbar.bluegray .top-progressbar-progress[value] {
+    border-color: #4f6482;
+}

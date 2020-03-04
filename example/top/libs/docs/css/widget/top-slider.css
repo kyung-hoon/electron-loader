@@ -1,0 +1,279 @@
+/*!
+ * top-slider
+ */
+
+top-slider[orientation="horizontal"] .top-slider-base,
+top-slider:not([orientation="vertical"]) .top-slider-base {
+    width: calc(100% - 16px);
+    height: 5px;
+    margin: 6px 8px;
+}
+
+top-slider[orientation="horizontal"] .top-slider-fill,
+top-slider:not([orientation="vertical"]) .top-slider-fill {
+    height: 5px;
+    top: -1px;
+}
+
+top-slider[orientation="horizontal"] .top-slider-handle,
+top-slider:not([orientation="vertical"]) .top-slider-handle {
+    top: -5px;
+    left: -6px;
+}
+
+top-slider[orientation="horizontal"] .top-slider-handle:active,
+top-slider:not([orientation="vertical"]) .top-slider-handle:active {
+    top: -7px;
+    left: -9px;
+}
+
+top-slider[orientation="vertical"] .top-slider-base {
+    height: calc(100% - 16px);
+    width: 5px;
+    margin: 8px 6px;
+}
+
+top-slider[orientation="vertical"] .top-slider-fill {
+    width: 5px;
+    left: -1px;
+    top: -1px;
+}
+
+top-slider[orientation="vertical"] .top-slider-handle {
+    left: -5px;
+    top: -7px;
+}
+
+top-slider[orientation="vertical"] .top-slider-handle:active {
+    left: -7px;
+    top: -9px;
+}
+
+top-slider .top-slider-target,
+top-slider .top-slider-target * {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+top-slider .top-slider-base {
+    display: inline-block;
+    outline: none;
+    background-color: #f1f1f1;
+    border: 1px solid #dfe1e5;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+top-slider .top-slider-base.active {
+    background-color: #fff;
+    border-color: #4085ee;
+}
+
+top-slider .top-slider-fill {
+    background-color: #4085ee;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 3px;
+}
+
+top-slider .top-slider-handle {
+    display: inline-block;
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: #4085ee;
+    cursor: pointer;
+}
+
+top-slider .top-slider-handle:active {
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border: 2px solid #4085ee;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+top-slider .top-slider-target {
+    display: inline-block;
+    position: relative;
+    direction: ltr;
+}
+
+top-slider .top-slider-origin {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+top-slider .top-slider-state-tap .top-slider-fill,
+top-slider .top-slider-state-tap .top-slider-origin {
+    -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+    transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+top-slider .top-slider-state-drag * {
+    cursor: inherit !important;
+}
+
+top-slider .top-slider-base,
+top-slider .top-slider-handle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+top-slider .top-slider-fill {
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+
+top-slider .top-slider-draggable {
+    cursor: ew-resize;
+}
+
+top-slider .top-slider-vertical .top-slider-draggable {
+    cursor: ns-resize;
+}
+
+top-slider [disabled] .top-slider-fill {
+    background: #B8B8B8;
+}
+ 
+top-slider [disabled].top-slider-target,
+top-slider [disabled].top-slider-handle,
+top-slider [disabled] .top-slider-handle {
+    cursor: not-allowed;
+}
+
+top-slider[disabled="true"] .top-slider-root * {
+    cursor: not-allowed !important;
+    background: #B8B8B8 !important;
+}
+
+top-slider .top-slider-pips,
+top-slider .top-slider-pips * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+top-slider .top-slider-pips {
+    position: absolute;
+    color: #999;
+}
+
+top-slider .top-slider-value {
+    position: absolute;
+    text-align: center;
+}
+
+top-slider .top-slider-value-sub {
+    color: #ccc;
+    font-size: 10px;
+}
+
+top-slider .top-slider-marker {
+    position: absolute;
+    background: #CCC;
+}
+
+top-slider .top-slider-marker-sub {
+    background: #AAA;
+}
+
+top-slider .top-slider-marker-large {
+    background: #AAA;
+}
+
+top-slider .top-slider-pips-horizontal {
+    padding: 10px 0;
+    height: 80px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+top-slider .top-slider-value-horizontal {
+    -webkit-transform: translate3d(-50%, 50%, 0);
+    transform: translate3d(-50%, 50%, 0);
+}
+
+top-slider .top-slider-marker-horizontal.top-slider-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+}
+
+top-slider .top-slider-marker-horizontal.top-slider-marker-sub {
+    height: 10px;
+}
+
+top-slider .top-slider-marker-horizontal.top-slider-marker-large {
+    height: 15px;
+}
+
+top-slider .top-slider-pips-vertical {
+    padding: 0 10px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+top-slider .top-slider-value-vertical {
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+    padding-left: 25px;
+}
+
+top-slider .top-slider-marker-vertical.top-slider-marker {
+    width: 5px;
+    height: 2px;
+    margin-top: -1px;
+}
+
+top-slider .top-slider-marker-vertical.top-slider-marker-sub {
+    width: 10px;
+}
+
+top-slider .top-slider-marker-vertical.top-slider-marker-large {
+    width: 15px;
+}
+
+top-slider .top-slider-tooltip {
+    display: block;
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    text-align: center;
+}
+
+top-slider .top-slider-horizontal .top-slider-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 120%;
+}
+
+top-slider .top-slider-vertical .top-slider-tooltip {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 120%;
+}

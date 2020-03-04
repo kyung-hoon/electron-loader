@@ -1,0 +1,7 @@
+/*!
+ * top-treeview_ie
+ */
+
+top-treeview .top-treeview-container input.top-treeview-button+i {
+    cursor: pointer;
+}

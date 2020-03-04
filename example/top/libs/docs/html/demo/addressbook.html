@@ -1,0 +1,76 @@
+<top-linearlayout border-width="0" margin="10px" horizontal-alignment="center">
+    <top-textfield hint="name" data-model='{"text":"user.name"}' margin="5px"></top-textfield>
+    <top-textfield hint="age" data-model='{"text":"user.age"}' margin="5px"></top-textfield>
+    <top-textfield hint="location" data-model='{"text":"user.location"}' margin="5px"></top-textfield>
+    <top-button text="Add" on-click="addUser" margin="5px"></top-button>
+    <top-button text="Remove" on-click="removeUser" class="violet" margin="5px"></top-button>
+</top-linearlayout>
+<top-linearlayout border-width="0" layout-height="500px" margin="10px" horizontal-alignment="center">
+    <top-tableview id="table1" data-model='{"items":"list.users"}' row-selected="selectUser" margin="10px"></top-tableview>
+    <top-textarea id="tutorialTextArea" text='<Address book : Data-binding set / add / remove 사용하기>
+
+<html>
+   <top-linearlayout border-width="0" margin="10px" horizontal-alignment="center">
+	    <top-textfield hint="name" data-model=&#x27;{"text":"user.name"}&#x27; margin="5px"></top-textfield>
+	    <top-textfield hint="age" data-model=&#x27;{"text":"user.age"}&#x27; margin="5px"></top-textfield>
+	    <top-textfield hint="location" data-model=&#x27;{"text":"user.location"}&#x27; margin="5px"></top-textfield>
+	    <top-button text="Add" on-click="addUser" margin="5px"></top-button>
+	    <top-button text="Remove" on-click="removeUser" class="violet" margin="5px"></top-button>
+  </top-linearlayout>
+  <top-linearlayout border-width="0" margin="10px" horizontal-alignment="center">
+  	   <top-tableview id="table1" data-model=&#x27;{"items":"list.users"}&#x27; row-selected="selectUser" margin="10px">
+          </top-tableview>
+  </top-linearlayout>
+</html>
+
+<script>
+  var list = Top.Data.create({
+	    users: [{
+	        name: "Kim",
+	        age: "30",
+	        location: "Seoul"
+	    }, {
+	        name: "Lee",
+	        age: "40",
+	        location: "Incheon"
+	    }, {
+	        name: "Park",
+	        age: "50",
+	        location: "Busan"
+	    }]
+});
+  var user = Top.Data.create({
+      name: "",
+      age: "",
+      location: ""
+  });
+
+  function addUser() {
+      list.addValue(&#x27;users&#x27;, user);
+      user.reset();
+  }
+
+  function removeUser() {
+      var index = Top.Dom.selectById("table1").getSelectedIndex();
+      list.removeValue(&#x27;users.&#x27; + index);
+      user.reset();
+  }
+
+  function selectUser(index, data) {
+      user.setValues(data);
+  }
+</script>
+
+<Event - function>  
+
+addUser() : textfield 의 data들을 list에 추가하는 함수.
+
+removeUser() : tableview 에서 선택된 row의 데이터를 삭제하는 함수.
+
+selectUser(index, data) : tableview 의 row를 클릭하면 textfield에 해당 row 값이 들어 가게하는 함수.
+
+*data-model을 바인딩 할 때는 반드시 객체를 single-qoutes(&#x27;) 로 감싸 주어야 한다.
+
+*각 위젯의 자세한 property 와 template은 widgets란을 참조.
+' margin="40px 10px" layout-width="850px" rows="66"></top-textarea>
+</top-linearlayout>

@@ -1,0 +1,120 @@
+/*!
+ * top-checkbox
+ */
+top-checkbox .top-checkbox-text.right {
+    padding-right: 17px;
+}
+
+top-checkbox .top-checkbox-text.left {
+    padding-left: 17px;
+}
+
+top-checkbox .top-checkbox-text.right::before {
+    content: "\e925";
+    position: absolute;
+    font-size: 13px;
+    color: #9aa8b1;
+    top: calc(50% - 6.5px);
+    right: 0%;
+    line-height: 1.1;
+    font-family: 'tmaxop';
+}
+
+top-checkbox .top-checkbox-text.left::before {
+    content: "\e925";
+    position: absolute;
+    font-size: 13px;
+    color: #9aa8b1;
+    left: 0%;
+    top: calc(50% - 6.5px);
+    line-height: 1.1;
+    font-family: 'tmaxop';
+}
+
+top-checkbox .top-checkbox-check {
+    opacity: 0;
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+}
+
+top-checkbox .top-checkbox-check:focus+label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+top-checkbox .top-checkbox-text.checked.focus::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+top-checkbox .top-checkbox-check:checked+label::before {
+    content: "\e924";
+    outline: none;
+    font-size: 13px;
+    color: #6b9ad4;
+    border: 0px;
+    font-family: "tmaxop";
+}
+
+top-checkbox .top-checkbox-text.checked::before {
+    content: "\e924";
+    outline: none;
+    font-size: 13px;
+    color: #6b9ad4;
+    border: 0px;
+    font-family: "tmaxop";
+}
+
+top-checkbox[disabled="true"] * {
+    cursor: not-allowed !important;
+}
+
+top-checkbox .top-checkbox-check:disabled+label {
+    color: #aaaaaa;
+}
+
+top-checkbox .top-checkbox-text.disabled {
+    color: #aaaaaa;
+}
+
+top-checkbox .top-checkbox-check:disabled+label::before {
+    background-color: #cccccc;
+    border-radius: 2px;
+    cursor: not-allowed;
+}
+
+top-checkbox .top-checkbox-text.disabled::before {
+    background-color: #cccccc;
+    border-radius: 2px;
+    cursor: not-allowed;
+}
+
+top-checkbox .top-checkbox-check:disabled:checked+label::before {
+    color: #aaaaaa;
+    content: "\e924";
+}
+
+top-checkbox .top-checkbox-text.disabled.checked::before {
+    color: #aaaaaa;
+    content: "\e924";
+}
+
+top-checkbox.violet .top-checkbox-check:checked+label::before {
+    color: #8484ba;
+}
+
+top-checkbox.violet .top-checkbox-text.checked::before {
+    color: #8484ba;
+}
+
+top-checkbox.bluegray .top-checkbox-check:checked+label::before {
+    color: #677e9a;
+}
+
+top-checkbox.bluegray .top-checkbox-text.checked::before {
+    color: #677e9a;
+}

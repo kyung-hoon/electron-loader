@@ -1,0 +1,75 @@
+/*!
+ * top-radiobutton
+ */
+
+top-radiobutton {
+    display: inline-block;
+}
+
+top-radiobutton .top-radiobutton-text {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 12px;
+    color: #444444;
+    min-height: 15px;
+    box-sizing: border-box;
+}
+
+top-radiobutton .top-radiobutton-check {
+    width: 0px;
+    margin: 0px;
+    z-index: 1;
+    height: 0px;
+}
+
+top-radiobutton .top-radiobutton-text.left i {
+    margin-right: 20px;
+}
+
+top-radiobutton .top-radiobutton-text i::before {
+    font-family: "tmaxop";
+    font-style: normal;
+    content: "\e920";
+    font-size: 16px;
+    color: #9aa8b1;
+    position: absolute;
+}
+
+top-radiobutton .top-radiobutton-text.checked i::before,
+top-radiobutton .top-radiobutton-check:checked+.top-radiobutton-text i::before {
+    content: "\e921";
+    outline: none;
+    color: #6b9ad4;
+}
+
+top-radiobutton .top-radiobutton-check:focus+.top-radiobutton-text i::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+top-radiobutton .top-radiobutton-text.disabled {
+    color: #aaaaaa;
+}
+
+top-radiobutton[disabled="true"] * {
+    cursor: not-allowed !important;
+}
+
+top-radiobutton .top-radiobutton-text.disabled i::before {
+    content: "\e908";
+    cursor: not-allowed;
+}
+
+top-radiobutton.violet .top-radiobutton-text.checked i::before {
+    color: #8484ba;
+}
+
+top-radiobutton.bluegray .top-radiobutton-text.checked i::before {
+    color: #677e9a;
+}
+
+top-radiobutton .top-radiobutton-text.focus i::before {
+    color: #6b9ad4;
+}

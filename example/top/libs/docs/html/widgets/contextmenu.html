@@ -1,0 +1,56 @@
+<script>
+var test_contextmenu_item = [{
+        text: "Mornitoring",
+        icon: "icon-monitoring",
+        id: "menu-1",
+        divider: true,
+        children: [{
+            text: "Overview",
+            id: "menu-1-1",
+            divider: true,
+            children: [{
+                text: "Cluster1",
+                id: "menu-1-1-1"
+            }, {
+                text: "Cluster2",
+                id: "menu-1-1-2"
+            }]
+        }, {
+            text: "Real Time Analysis",
+            id: "menu-1-2"
+        }, {
+            "text": "menu1-3",
+            id: "menu-1-3"
+        }]
+    }, {
+        text: "Administrator",
+        id: "menu-2",
+        icon: "icon-expert",
+        children: [{
+            text: "User & Security",
+            id: "menu-2-1",
+            children: [{
+                id: "menu-2-1-1",
+                text: "text1",
+                depth: "3"
+            }]
+        }, {
+            text: "Schema Object",
+            id: "menu-2-2",
+            children: [{
+                text: "text2",
+                id: "menu-2-2-1",
+                depth: "3"
+            }]
+        }, {
+            id: "menu-2-3",
+            "text": "Storage",
+            "depth": "2",
+        } ]
+    }
+];
+
+</script>
+
+<top-button text="Button with ContextMenu! Click Right Mouse Button" menu="contextmenu1"></top-button>
+<top-contextmenu id="contextmenu1" items="test_contextmenu_item"></top-contextmenu>

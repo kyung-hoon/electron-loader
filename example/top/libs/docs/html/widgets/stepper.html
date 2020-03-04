@@ -1,0 +1,17 @@
+<script>
+var test_labels = ["First", "Second", "Third"];
+var stepper_next = function() {
+    Top.Dom.selectById('stepper').next();
+};
+var stepper_prev = function() {
+    Top.Dom.selectById('stepper').prev();
+}
+</script>
+<top-linearlayout margin="10px" orientation="vertical" border-width="0px">
+	 <top-stepper id="stepper" layout-width="500px" layout-height="100px" steps="3" spacing="10" labels="test_labels">
+        </top-stepper>
+     <top-linearlayout margin="10px" orientation="orientation" border-width="0px">
+        <top-button margin="10px 10px 10px 160px" text="prev()" on-click="stepper_prev"></top-button>
+        <top-button margin="10px" text="next()" on-click="stepper_next"></top-button>
+     </top-linearlayout>
+</top-linearlayout>

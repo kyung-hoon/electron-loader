@@ -1,0 +1,26 @@
+/*!
+ * top-tableview_chrome
+ */
+ .viupbtn
+ {
+   background: url(fonts/caret-up.svg) no-repeat;
+    background-position: center;
+   width: 15px;
+   height: 15px;
+   position: relative;
+   background-color: #eeeeee;
+   right: 0px;
+   top: 0px;
+ }
+
+ .vidownbtn
+ {
+   background: url(fonts/caret-down.svg) no-repeat;
+    background-position: center;
+   width: 15px;
+   height: 15px;
+   position: relative;
+   background-color: #eeeeee;
+   right: 0px;
+   bottom:0px;
+ }

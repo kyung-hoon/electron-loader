@@ -1,0 +1,14 @@
+/*!
+ * top-videoview
+ */
+
+.top-videoview-root {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-videoview[disabled="true"] .top-videoview-root {
+    cursor: not-allowed;
+    background-color: #e9e9e9;
+}

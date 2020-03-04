@@ -1,0 +1,11 @@
+/*!
+ * top-menu_chrome
+ */
+
+.Menu_type_header .top-menu_nav {
+    display: -webkit-box;
+}
+
+.Menu_type_header.placement_horizontal .depth1>ul {
+    display: -webkit-box;
+}

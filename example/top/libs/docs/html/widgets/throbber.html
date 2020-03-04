@@ -1,0 +1,19 @@
+<top-button text="small" on-click="startLoader(1)" margin="10px"></top-button>
+<top-button text="basic" on-click="startLoader()" margin="10px"></top-button>
+<top-button text="large" on-click="startLoader(2)" margin="10px"></top-button>
+
+<script>
+    function startLoader(num) {
+        var size = "";
+        if(num == 1)
+            size = "small";
+        else if(num == 2)
+            size = "large";
+        else 
+            size = undefined;
+    
+        Top.Loader.start(size);
+        setTimeout("Top.Loader.stop();", 2000);
+    };
+
+</script>

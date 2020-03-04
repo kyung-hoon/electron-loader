@@ -1,0 +1,53 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Chart.api" margin="15px" text-size="54px"></top-textview>
+    <top-textview text="*topcharts(chartOption)" margin="15px" text-size="24px"></top-textview>
+    <top-textview text=": chartOption을 option으로 하는 차트를 생성한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- chartOption = {colors, title, subtitle, xAxis, yAxis, series, grid, tooltip, pone, plotOption legend}  **자세한 사항은 Options tab 확인" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*update(chartOption) || setOption(chartOption)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": 차트의 옵션을 update 한다. (수정 할 option만 argument 로 넣으면 된다.)" margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- update와 setOption중 setOption이 최신 api" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*addSeries(seriesOption, redraw)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": series를 추가한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- seriesOption = { name : string, type : string, data : [dataSet], marker : {enabled} }" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- redraw(boolean) = data를 차트에 바로 적용시킬 것인지, 다른 api와 함께 일괄적으로 적용시킬 것인지를 결정하는 parameter. (default = true)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*removeSeries(index, count, redraw)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": chart의 index번의 series를 제거한다.(index는 series가 추가 된 순서)  인자가 없을경우 모든 series 제거" margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- redraw(boolean) = data를 차트에 바로 적용시킬 것인지, 다른 api와 함께 일괄적으로 적용시킬 것인지를 결정하는 parameter. (default = true)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*updateSeries(seriesIndexOrName, seriesOption, redraw)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": series를 update 한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- seriesIndexOrName(string or number) = 선택할 시리즈의 index 혹은 name(id)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- seriesOption = { name : string, type : string, data : [dataSet], marker : {enabled} }" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- redraw(boolean) = data를 차트에 바로 적용시킬 것인지, 다른 api와 함께 일괄적으로 적용시킬 것인지를 결정하는 parameter. (default = true)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*addPoint(seriesIndexOrName, pointOption, shift, duration, redraw)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": series에 data(pointOption)를 추가한다. *shift 옵션을 사용할 경우 애니메이션 효과를 주며 data를 shift 할 수 있다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- seriesIndexOrName(string or number) = 선택할 시리즈의 index 혹은 name(id)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- pointOption = [1]Value, [2]Array(x, value), [3]InnerData(object)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- shift = [1]Boolean(default 값 사용), [2]Object = {duration : number, length : number, to : x_value }" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- [2]부가설명 : duration = shift 동작에 소요되는 시간 duration,  length = x축을 몇칸 이동할 것인가,  to = 해당 x축에 가장 근접한 값으로 이동" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="- *여러개의 series를 shift 할 시* : redraw 인자를 false로 넣고, 가장 마지막에 addPoint 되는 series의 redraw 인자만 true 로 입력" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*emptyFrameQueue()" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": 아직 실행되지 않은 실행 예정인 API의 정보를 들고, 실행 시간과 순서를 지켜주는 queue인 frameQueue를 강제로 비운다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- 실행 예정된 API들의 실행을 즉시 모두 취소하고 다른 API를 즉시 실행 하고 싶을시 사용." margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*data()" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": chart가 가지고있는 series data 의 object를 array화 하여 return한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*setSeriesData(seriesIndexOrName, dataSet)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": series의 data를 dataSet으로 update 한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- dataSet = [1]Value, [2]Array(x, value), [3]InnerData(object)" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*getSeriesData(seriesIndexOrName)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": series의 data value를 array로 return한다. " margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*categories(categories)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": chart의 categories를 수정한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*color(seriesName)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": seriesName(string)에 해당하는 series의 color set(array)를 return 한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- array는 5개의 값으로 이루어지며, series의 상태(기본, focus, blur 등)에 따라 5개의 값 중 하나가 선택된다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text='- ex) ["#3f51b5", "#6574c4", "#828ecf", "#a8b1de", "#cfd4ed"] 기본 색상은 2번째 값이며, focus된 경우 색은 1번째 값이다.' margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*redraw()" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": redraw(그리기 작업)을 수행한다. <다른 API와의 호환성 문제로 사용 비추천>" margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*addLabels(labelOptions)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": chart에 label(s)을 추가한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="- labelOptions = { text : string, x : number(x좌표), y : number(y좌표), style : style 속성 }" margin="10px 20px" text-size="16px"></top-textview>
+    <top-textview text="*updateLabels(labelOptions)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": labels 의 option을 수정한다." margin="10px 20px" text-size="18px"></top-textview>
+    <top-textview text="*updateLabel(labelIndex, labelOptions)" margin="30px 15px 5px 15px" text-size="24px"></top-textview>
+    <top-textview text=": label 의 해당 index option을 수정한다." margin="10px 20px 50px" text-size="18px"></top-textview>
+</top-linearlayout>

@@ -1,0 +1,26 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Ajax" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="Top.Ajax를 통해 ajax를 수행할 수 있다." margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="API" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="Top.Ajax.execute()" text-size="16px" margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="Top.Ajax.execute의 사용 방법은 기본적으로 jQuery.ajax()와 같다. 추가 기능으로 response에 Top.Data의 경로를 명시할 경우 전달 받은 data를 자동 입력한다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="Example" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="다음 예제와 같이 ajax를 실행하고 response를 Top.Data와 바인딩한다." margin="0px 10px 10px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.Data.create(&#x27;responseData&#x27;, {
+    user: ""
+});
+
+Top.Ajax.execute({
+    url: "server.php",
+    type: "GET",
+    success: function(data, textStatus, jqXHR) {
+        ...
+    },
+    response: "responseData.user"
+});'></top-codeeditor>
+    <top-textview text="<top-ajax> 태그를 사용하여 다음과 같이 ajax를 정의할 수 있다. <top-ajax> 태그는 화면상 나타나지 않는다." margin="10px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='<top-ajax id="ajax1" url="server.php" type="get" response="responseData.user"></top-ajax>'></top-codeeditor>
+    <top-textview text="위에서 정의한 ajax는 다음 두 가지 방법으로 실행할 수 있다." margin="10px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.Ajax.executeById("ajax1");'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.Dom.selectById("ajax1").execute();'></top-codeeditor>
+</top-linearlayout>

@@ -1,0 +1,23 @@
+/*!
+ * top-linearlayout
+ */
+
+top-linearlayout>.top-linearlayout-root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    line-height: normal;
+    position: relative;
+    font-size: 0px;
+}
+
+.top-linearlayout-root>.linear-child-vertical {
+    display: block;
+}
+
+.top-linearlayout-root>.linear-child-horizontal {
+    display: inline;
+}

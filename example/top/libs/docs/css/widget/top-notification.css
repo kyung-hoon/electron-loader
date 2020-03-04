@@ -1,0 +1,122 @@
+/*!
+ * top-notification
+ */
+
+.top-notification-root {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    width: auto;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.top-notification-root .alert-link {
+    font-weight: bold;
+}
+
+.top-notification-root .top-notification-icon {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+}
+
+.top-notification-root .top-notification-title {
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 5px;
+    padding-right: 10px;
+}
+
+.top-notification-root .top-notification-message {
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    left: 5px;
+    padding-right: 30px;
+}
+
+.top-notification-root .top-notification-close {
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    float: right;
+    font-size: 16px;
+    outline: none;
+}
+
+.top-notification-root .top-notification-close:before {
+    font-family: 'tmaxop';
+    content: "\e902";
+}
+
+.top-notification-root .top-notification-close:hover,
+.top-notification-root .top-notification-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.alert-success {
+    background-color: rgba(142, 204, 100, 0.3);
+    border-color: #b3cba3;
+    color: #50812f;
+}
+
+.alert-success hr {
+    border-top-color: #a6c293;
+}
+
+.alert-success .alert-link {
+    color: #395c21;
+}
+
+.alert-info {
+    background-color: rgba(113, 164, 226, 0.3);
+    border-color: #adc1d9;
+    color: #3b6395;
+}
+
+.alert-info hr {
+    border-top-color: #9cb4d1;
+}
+
+.alert-info .alert-link {
+    color: #2d4b70;
+}
+
+.alert-warning {
+    background-color: rgba(251, 205, 41, 0.3);
+    border-color: #dac989;
+    color: #a58200;
+}
+
+.alert-warning hr {
+    border-top-color: #d4c076;
+}
+
+.alert-warning .alert-link {
+    color: #725a00;
+}
+
+.alert-danger {
+    background-color: rgba(241, 64, 71, 0.3);
+    border-color: #d99497;
+    color: #9e1318;
+}
+
+.alert-danger hr {
+    border-top-color: #d28185;
+}
+
+.alert-danger .alert-link {
+    color: #700e11;
+}

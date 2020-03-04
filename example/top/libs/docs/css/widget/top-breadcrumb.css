@@ -1,0 +1,255 @@
+/*!
+ * top-breadcrumb
+ */
+top-breadcrumb .top-breadcrumb-root {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+top-breadcrumb .top-breadcrumb-container.doubleLine {
+    cursor: default;
+    display: table-cell;
+    vertical-align: middle;
+    height: 68px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #e8edf1;
+    background-color: #f9fafa;
+}
+
+top-breadcrumb .top-breadcrumb-container>div,
+top-breadcrumb .top-breadcrumb-button-container,
+top-breadcrumb .top-breadcrumb-container>a {
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: none;
+}
+
+top-breadcrumb .top-breadcrumb-container>a .texts {
+    height: 30px;
+    padding: 8px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+top-breadcrumb .top-breadcrumb-container>a .texts:hover {
+    background-color: #dde8f7;
+    border-radius: 2px;
+}
+
+top-breadcrumb .top-breadcrumb-text-container .text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+top-breadcrumb .top-breadcrumb-text-container .subtext {
+    font-size: 12px;
+    color: #777777;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+top-breadcrumb .top-breadcrumb-text-container .top-breadcrumb-current {
+    color: #3a67bb;
+}
+
+top-breadcrumb .top-breadcrumb-text-container .top-breadcrumb-list-container .text {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 3px;
+}
+
+top-breadcrumb .top-breadcrumb-text-container .top-breadcrumb-list-container .subtext {
+    font-size: 12px;
+    color: #777777;
+}
+
+top-breadcrumb .top-breadcrumb-text-container {
+    /*height: 30px;*/
+    cursor: pointer;
+    /*padding: 8px;*/
+    text-decoration: none;
+}
+
+top-breadcrumb .top-breadcrumb-list-container .top-breadcrumb-text-container {
+    height: 28px;
+    cursor: pointer;
+    padding: 8px;
+    text-decoration: none;
+}
+
+top-breadcrumb .top-breadcrumb-button-container {
+    margin-right: 12px;
+    border: 1px solid #e8edf1;
+    border-right: 0px;
+    background-color: #f9fafa;
+}
+
+top-breadcrumb .top-breadcrumb-button-container.active {
+    background-color: #e8edf1;
+}
+
+top-breadcrumb .top-breadcrumb-button {
+    height: 68px;
+    width: 18px;
+    /*border: 0px 1px 0px 0px solid #e8edf1;*/
+    /*background-color: #f9fafa;*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+top-breadcrumb .top-breadcrumb-button-container .top-breadcrumb-button .top-breadcrumb-button-icon {
+    float: right;
+    line-height: 30px;
+    padding: 0 10px 0 10px;
+    font-size: 8px;
+    color: #333;
+}
+
+top-breadcrumb .top-breadcrumb-button-container .top-breadcrumb-button-icon.icon-arrow_filled_down:before {
+    content: "\e911";
+    font-family: "tmaxop";
+}
+
+top-breadcrumb .top-breadcrumb-button-container .top-breadcrumb-button-icon.icon-arrow_filled_up:before {
+    content: "\e914";
+    font-family: "tmaxop";
+}
+
+top-breadcrumb .top-breadcrumb-list-container {
+    display: none;
+    list-style: none;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    border: 1px solid #3e75c7;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 10;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+top-breadcrumb .top-breadcrumb-list {
+    text-decoration: none;
+    outline: none;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 0px;
+    text-align: left;
+    padding: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+top-breadcrumb .top-breadcrumb-list div {
+    line-height: 13px;
+}
+
+top-breadcrumb .top-breadcrumb-list:hover {
+    background-color: #dde8f7;
+}
+
+top-breadcrumb .top-breadcrumb-list.active,
+top-breadcrumb .top-breadcrumb-list:active,
+top-breadcrumb .top-breadcrumb-list:focus {
+    background-color: #4085ee;
+    color: #fff;
+}
+
+top-breadcrumb .top-breadcrumb-list:active a div,
+top-breadcrumb .top-breadcrumb-list.active a div {
+    color: #ffffff;
+}
+
+top-breadcrumb .top-breadcrumb-list.title {
+    border-bottom: 1px dashed #d6d6d6;
+    color: #9c9c9c;
+    background-color: #fbfbfb;
+    cursor: default;
+    font-style: italic;
+}
+
+top-breadcrumb .top-breadcrumb-list.disabled {
+    color: #9c9c9c;
+    background-color: #fbfbfb;
+    cursor: not-allowed;
+}
+
+top-breadcrumb[disabled="true"] .top-breadcrumb-root,
+top-breadcrumb[disabled="true"] .top-breadcrumb-root * {
+    cursor: not-allowed !important;
+    color: #B8B8B8;
+}
+
+top-breadcrumb .top-breadcrumb-list:first-child {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+top-breadcrumb .top-breadcrumb-list:last-child {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+
+top-breadcrumb .top-breadcrumb-default {
+    color: #626262;
+}
+
+top-breadcrumb .top-breadcrumb-divider {
+    margin: 0px 4px;
+    color: #222222;
+    font-size: 9px;
+}
+
+top-breadcrumb .top-breadcrumb-divider.icon-arrows_right_thin:before {
+    content: "\e91a";
+    font-family: "tmaxop";
+    font-style: normal;
+}
+
+
+
+top-breadcrumb .top-breadcrumb-container.basic {
+    cursor: default;
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+top-breadcrumb .top-breadcrumb-container.basic a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+top-breadcrumb .top-breadcrumb-container.basic .top-breadcrumb-default {
+    color: #626262;
+}
+
+top-breadcrumb .top-breadcrumb-container.basic .top-breadcrumb-current {
+    color: #3a67bb;
+}
+
+top-breadcrumb .top-breadcrumb-container.basic .top-breadcrumb-divider {
+    margin: 0px 7px;
+    font-size: 12px;
+    color: #ababab;
+}

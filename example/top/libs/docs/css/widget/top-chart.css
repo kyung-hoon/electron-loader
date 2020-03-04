@@ -1,0 +1,14 @@
+/*!
+ * top-chart
+ */
+top-chart .top-chart {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-chart[disabled="true"] .top-chart-root,
+top-chart[disabled="true"] .top-chart-root * {
+    cursor: not-allowed !important;
+    /*background-color: #e9e9e9;*/
+}

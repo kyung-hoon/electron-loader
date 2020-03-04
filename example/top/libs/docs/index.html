@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="res/app_icon_top_16.png">
+    <script src="lib/lib.min.js"></script>
+	<script src="core/top-core.min.js"></script>
+	<script src="widget/top-widgets.js"></script>
+    <script id="top.js" src="top-runtime.min.js"></script>
+    <link rel="stylesheet" href="chart/top.chart.css">
+	<link type="text/css" rel="stylesheet" href="css/jquery-te-1.4.0.css">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <top-page id="page_intro" vertical-scroll="hidden" src="mainLayout.html">
+    </top-page>
+    <script>
+    Top.App.create({
+        config: "config.json",
+        route: {
+            "/:main/:sub": {
+                activate: "route",
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

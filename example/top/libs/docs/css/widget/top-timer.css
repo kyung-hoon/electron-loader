@@ -1,0 +1,14 @@
+/*!
+ * top-timer
+ */
+
+.top-timer-root {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: normal;
+    white-space: nowrap;
+    color: #ff6600;
+}

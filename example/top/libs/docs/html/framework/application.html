@@ -1,0 +1,33 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Application" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="Top.App을 통해 앱을 생성하고 관리한다." margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="API" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="Top.App.create(settings)" text-size="16px" margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="Application 생성 및 초기값을 설정하며 각각의 설정값들은 다음과 같다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="config (Object or String)" text-size="16px" margin="10px 10px 10px 25px"></top-textview>
+    <top-textview text="Application의 메타 정보" margin="0px 10px 10px 25px"></top-textview>
+    <top-tableview items="frameworkData.framework_app_create_config" margin="10px 10px 10px 25px" layout-width="500px"></top-tableview>
+    <top-textview text="위의 메타정보들을 다음과 같이 앱 생성 시 입력한다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor margin="10px 10px 0px 25px" read-only="true" theme="darcula" text='Top.App.create({
+    config: {
+        "name": "TOP.js",
+        "indexPageId": "pageMain",
+        "version": "1.0.0",
+        "developer": "Tmax",
+        "js": ["js/page1.js", "main.js"],
+        "css": ["main.css"]
+    }
+    ...
+});'></top-codeeditor>
+    <top-textview text="또는 별도 json 파일에 저장하여 파일 경로로 입력이 가능하다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor read-only="true" theme="darcula" margin="10px 10px 10px 25px" readonly="true" text='Top.App.create({
+    config: "config.json"
+    ...
+});'></top-codeeditor>
+    <top-textview text="event" text-size="16px" margin="10px 10px 0px 25px"></top-textview>
+    <top-textview text="좌측 Event 메뉴 참고" margin="10px 10px 10px 25px"></top-textview>
+    <top-textview text="route" text-size="16px" margin="10px 10px 0px 25px"></top-textview>
+    <top-textview text="좌측 Routing 메뉴 참고" margin="10px 10px 10px 25px"></top-textview>
+    <top-textview text="i18n" text-size="16px" margin="10px 10px 0px 25px"></top-textview>
+    <top-textview text="좌측 i18n 메뉴 참고" margin="10px 10px 20px 25px"></top-textview>
+</top-linearlayout>

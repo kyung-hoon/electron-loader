@@ -1,0 +1,29 @@
+<top-linearlayout id="mainLayout" layout-height="46px" orientation="horizontal" border-width="0px">
+    <top-linearlayout layout-width="calc((100% - 725px)/2)" layout-height="100%" border-width="0px" background-color="#2a2c30">
+        <top-imagebutton src="res/js_web_logo.png" on-click="/"></top-imagebutton>
+    </top-linearlayout>
+    <top-linearlayout layout-width="725px" layout-height="100%" border-width="0px" background-color="#2a2c30">
+        <top-tablayout id="docsTab" tabs="gnbTabData.items" on-tabchange="tabOnSelect" border-width="0px" vertical-scroll="hidden"></top-tablayout>
+    </top-linearlayout>
+    <top-linearlayout background-color="#2a2c30" horizontal-alignment="right" vertical-alignment="middle" layout-width="calc((100% - 725px)/2)" layout-height="100%" border-width="0px">
+    </top-linearlayout>
+</top-linearlayout>
+<top-linearlayout id="layout_content" orientation="vertical" layout-height="calc(100% - 41px - 46px)" border-width="0px">
+    <top-linearlayout background-image="./res/js_web_banner_full.png" layout-height="527px" orizontal-alignment="left" border-width="0px"></top-linearlayout>
+    <top-linearlayout border-width="0" layout-width="100%" layout-height="calc(100% - 527px)" orientation="vertical">
+        <top-layout horizontal-alignment="center" border-width="0px" margin="30px">
+            <top-textview text="TOP를 통해 개발을 시작해 보세요" text-size="40px" text-color="#414e70"></top-textview>
+        </top-layout>
+        <top-linearlayout orientation="horizontal" border-width="0px" controller="startButtonController">
+            <top-linearlayout layout-width="50%" border-width="0px" horizontal-alignment="right" orientation="vertical">
+                <top-imagebutton id="btn_start" src="res/js_web_btn_start_normal.png" on-click="/demo/" on-mouseover="over" on-mousedown="down" on-mouseleave="leave" margin="0px 15px 0px 15px"></top-imagebutton>
+            </top-linearlayout>
+            <top-linearlayout layout-width="50%" border-width="0px" horizontal-alignment="left">
+                <top-imagebutton id="btn_download" src="res/js_web_btn_download_normal.png" on-click="window.open('ftp://192.168.1.154:12121/alfresco/shared/distribution/TOP/')" on-mouseover="over" on-mousedown="down" on-mouseleave="leave" margin="0px 15px 0px 15px"></top-imagebutton>
+            </top-linearlayout>
+        </top-linearlayout>
+    </top-linearlayout>
+</top-linearlayout>
+<top-linearlayout background-color="#d9dce2" layout-height="41px" border-width="0px" horizontal-alignment="center" orientation="vertical">
+    <top-textview margin="11px" text="Copyright (c) 2018. TmaxOS CO.,Ltd, All Rights Reserved" text-size="10px" opacity="0.8"></top-textview>
+</top-linearlayout>

@@ -1,0 +1,17 @@
+<script>
+function openDialog(e, widget) {
+    if (widget.id === "popup_01") {
+        Top.Dom.selectById("dialog_test1").open();
+    } else {
+        Top.Dom.selectById("dialog_test2").open();
+    }
+}
+</script>
+<top-dialog id="dialog_test1" class="popup_01" title="Popup_01" layout-width="600px" layout-height="400px">
+    <top-textview text="dialog example"></top-textview>
+</top-dialog>
+<top-dialog id="dialog_test2" class="popup_02" title="Popup_02" layout-width="600px" layout-height="400px">
+    <top-textview text="dialog example"></top-textview>
+</top-dialog>
+<top-button id="popup_01" text="open popup_01" on-click="openDialog" margin="10px"></top-button>
+<top-button id="popup_02" text="open popup_02" on-click="openDialog" margin="10px"></top-button>

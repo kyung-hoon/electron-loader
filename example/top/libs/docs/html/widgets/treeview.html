@@ -1,0 +1,54 @@
+<script>
+var test_treenodes = [{
+    id: "Tmax_Group", text: "Tmax group", icon: "icon-folder", children: [
+        { id: "TmaxSoft", text: "TmaxSoft", icon: "icon-search", children: [
+            { id: "TP", text: "TP" },
+            { id: "EP", text: "EP" }, 
+            { id: "PM", text: "PM" }
+        ]}, 
+        { id: "TmaxData", text: "TmaxData", image: "./res/graph.png", children: [
+            { id: "DB1", text: "DB1" },
+            { id: "DB2", text: "DB2" },
+            { id: "DB3", text: "DB3" }
+        ]}, 
+        { id: "TmaxGlobal", text: "TmaxGlobal", children: [
+            { id: "USA", text: "USA" },
+            { id: "Japan", text: "Japan"},
+            { id: "CHN", text: "CHN" }
+        ]}
+    ]
+}];
+
+var tree_option = {
+    node: {
+        checkable: true,
+        editable: true,
+        deletable: true,
+        draggable: true
+    },
+    view : {
+        expand: true
+    }
+
+};
+
+</script>
+<top-linearlayout orientation="vertical" border-width="0px" horizontal-alignment="center" layout-width="45%" margin="20px">
+    <top-textview text-size="20px" text="Non-Binding(static) Case"> </top-textview>
+    <top-treeview id="treeview1" margin="5px" group-icon="icon-expert" child-icon="icon-administrator">
+        <top-widgetitem text="node-1" image="res/graph.png">
+            <top-widgetitem text="node-11"></top-widgetitem>
+            <top-widgetitem text="node-12">
+                <top-widgetitem text="node-121"></top-widgetitem>
+                <top-widgetitem text="node-122"></top-widgetitem>
+            </top-widgetitem>
+            <top-widgetitem text="node-13"></top-widgetitem>
+        </top-widgetitem>
+        <top-widgetitem text="node-2" icon="icon-folder"></top-widgetitem>
+        <top-widgetitem text="node-3"></top-widgetitem>
+    </top-treeview>
+</top-linearlayout>
+<top-linearlayout orientation="vertical" border-width="0px" horizontal-alignment="center" layout-width="45%" margin="20px">
+    <top-textview text-size="20px" text="Binding Case"> </top-textview>
+    <top-treeview id="treeview2" margin="5px" nodes="test_treenodes" option="tree_option"></top-treeview>
+</top-linearlayout>

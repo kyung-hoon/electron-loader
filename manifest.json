@@ -1,15 +1,18 @@
 {
-    "APP_NAME" : "test",
+    "projectRoot" : "../",
+    "target" : "/home/kangdh/git/electron-loader/example/electron_test",
+    "platform" : "win",
+    "buildType" : "debug",
     
-    "USER_CODE_PATH" : "/home/kangdh/Desktop/electron-loader/res/test_code",
-    "ELECTRON_MAIN_JS_PATH" : "/home/kangdh/Desktop/electron-loader/index.js",
-    "ELECTRON_ICON_PATH" : "/home/kangdh/Desktop/electron-loader/res/test_icon.ico",
+    "app_name" : "test",
+    "electron_main_js_name" : "index.js",
+    "electron_icon_name" : "test_icon.ico",
 
     "browserWindow_json" : {
         "width": 800,
         "height": 600,
         "webPreferences": {
-            "nodeIntegration": true
+            "nodeIntegration": false
         }
     }
 }

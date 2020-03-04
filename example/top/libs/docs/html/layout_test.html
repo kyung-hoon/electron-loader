@@ -1,0 +1,21 @@
+<top-linearlayout controller="testController" padding="20px" orientation="vertical" border-width="0">
+    <top-selectbox id="version_box" title="Version" data-model='{"nodes": "docsData.version_list"}' selected-index="0" on-change="onVersionChange" margin="0px 20px 20px 20px"></top-selectbox>
+    <top-panel title="Overview"  margin="20px">
+        <top-textview display="block" data-model='{"text": "docsData.namespace"}' margin="10px" text-size="30px"></top-textview>
+        <top-textview display="block" id='overview' data-model='{"text": "docsData.overview"}' margin="10px" text-size="20px"></top-textview>
+    </top-panel>
+    <top-panel title="Object information" margin="20px">
+        <top-linearlayout orientation="vertical">
+            <top-textview display="block" id="property" margin="10px" text-size="20px"></top-textview>
+            <top-textview display="block" multi-line="true" data-model='{"text": "docsData.property"}' margin="10px" text-size="15px"></top-textview>
+        </top-linearlayout>
+        <top-linearlayout orientation="vertical">
+            <top-textview display="block" id="method" margin="10px" text-size="20px"></top-textview>
+            <top-textview display="block" multi-line="true" data-model='{"text": "docsData.method"}' margin="10px" text-size="15px"></top-textview>
+        </top-linearlayout>
+        <top-linearlayout orientation="vertical">
+            <top-textview display="block" id="event" margin="10px" text-size="20px"></top-textview>
+            <top-textview display="block" multi-line="true" data-model='{"text": "docsData.event"}' margin="10px" text-size="15px"></top-textview>
+        </top-linearlayout>
+    </top-panel>
+</top-linearlayout>

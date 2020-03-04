@@ -1,0 +1,142 @@
+/* imagebutton 클릭시 파란 테두리 방지 */
+input[type="image"]:focus {
+    outline: none;
+}
+
+/* 상단 tab gnb */
+top-tablayout#docsTab>.top-tablayout-root>.top-tablayout-container>table>tbody>tr>td>.top-tablayout-tab {
+    height: 46px; 
+    font-size: 15px;
+    border-width: 0px;
+    color: #ffffff;
+    background-color: #2a2c30;
+    opacity: 0.8;
+    padding: 12px 20px;
+}
+top-tablayout#docsTab>.top-tablayout-root>.top-tablayout-container>table>tbody>tr>td>.top-tablayout-tab.active {
+    color: #ffd21c;
+}
+top-tablayout#docsTab>.top-tablayout-root>.top-tablayout-container>table>tbody>tr>td>.top-tablayout-tab:hover {
+    opacity: 1.0;
+}
+top-tablayout#docsTab.tab_01>.top-tablayout-root>.top-tablayout-container {
+    border: 0px;
+}
+top-tablayout#docsTab>.top-tablayout-root>.top-tablayout-container>table {
+    background-color: #2a2c30;   /* remove border */
+}
+
+/* 좌측 메뉴 #menu_lnb */
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav{
+    min-width: 0px;
+    width: 230px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu-container{
+    min-width: 0px;
+    width: 230px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth2:first-child{
+    border-top: 0px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1>.top-menu_item_inner>.top-menu_icon{
+    margin: 0 0 0 34px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1>.top-menu_item_inner{
+    line-height: 40px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth2{
+    line-height: 30px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth2>.top-menu_item_inner{
+    line-height: 30px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1>.top-menu_item_inner>.top-menu_arrow {
+    margin-right: 33px; /* 16px(guideline) + 17px(scroll bar size*/
+    line-height: 40px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth2>.top-menu_item_inner{
+    padding-left: 50px; /* 34 + 16px */
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1{ 
+    background-color: #414e70;
+    font-size: 15px;
+    color: #ffffff;
+    border-bottom: 0px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth2{
+    background-color: #d9dce2;
+    font-size: 12px;
+    color: #414e70;
+    border-bottom: 0px;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1.selected.top-menu_open{
+    background-color: #d9dce2;
+    color: #2756dc;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu-container{
+    background-color: #414e70;
+}
+top-menu[type="side"].menu_02#menu_lnb li.top-menu_item.depth1:hover{
+    background-color: #54607f;
+}
+top-menu[type="side"].menu_02#menu_lnb li.depth1.selected.top-menu_open li.top-menu_item.depth2:hover{
+    color: #112d7b;
+}
+top-menu[type="side"].menu_02#menu_lnb li.depth1.selected.top-menu_open li.top-menu_item.depth2.selected{
+    color: #2756dc;
+    font-weight: bold;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1.selected.top-menu_open{
+    background-color: #2756dc;
+    color: #ffffff;
+}
+top-menu[type="side"].menu_02#menu_lnb .top-menu_nav li.depth1.selected{
+    background-color: #2756dc;
+    color: #ffffff;
+}
+
+
+
+/* Detail page background */
+#intro_banner{
+    background-position: center;
+    background-size: cover;
+}
+#example_editor > div > div.CodeMirror{
+    height: unset;
+}
+
+/* page vertical-scroll: hidden */
+top-page#page_intro {
+    overflow-y: hidden;
+}
+
+
+/* layout_list button */
+top-button.box_item > .top-button-root {
+    font-weight: bold;
+    background-color: transparent;
+    color: #414e70;
+    font-size: 16px;
+    border: 2px solid #878fa5;
+}
+top-button.box_item > .top-button-root:hover {
+    background-color: #bbc0cc;
+    border: 2px solid #65708b;
+}
+top-button.box_item > .top-button-root:active {
+    background-color: #414e70;
+    color: #ffffff;
+    border: 2px solid #414e70;
+}
+
+/* style link color */
+top-textview.link_color > span > a.top-textview-url{
+    color: #0045f2;
+}
+
+
+/* widget detail page*/
+top-linearlayout#layout_main top-panel .top-panel-content {
+    padding: 20px;
+}

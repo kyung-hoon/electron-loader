@@ -1,0 +1,7 @@
+{
+    "projectRoot" : "../",
+    "target" : "example/top",
+    "platform" : "android",
+    "buildType" : "debug"
+  }
+  

@@ -1,0 +1,41 @@
+/*!
+ * top-imageview
+ */
+
+top-imageview .top-imageview-root {
+    border: 1px solid #d3dbdf;
+    line-height: normal;
+    box-sizing:border-box;
+}
+
+top-imageview[disabled="true"] .top-imageview-root {
+    cursor: not-allowed;
+    background-color: #e9e9e9;
+}
+
+top-imageview .top-imageview-root:hover {
+    border: 1px solid #4085ee;
+    border-radius: 2px;
+}
+
+top-imageview.round .top-imageview-root {
+    border-radius: 6px;
+}
+
+top-imageview.circle .top-imageview-root {
+    border-radius: 50%;
+}
+
+top-imageview.thumbnail .top-imageview-root {
+    padding: 4px;
+    line-height: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}

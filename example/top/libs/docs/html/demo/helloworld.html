@@ -1,0 +1,32 @@
+<top-textview text-size="20px" text="Your name : "></top-textview>
+<top-textfield margin="0px 0px 0px 20px" data-model='{"text":"user.name"}'></top-textfield>
+<top-textview text="Hello," text-size="24px"></top-textview>
+<top-textview data-model='{"text":"user.name"}' text-size="24px" text-color="blue" margin="0px 0px 0px 5px"></top-textview>
+<top-textarea id="tutorialTextArea" text='<Hello world : Data-binding 적용하기>
+
+<html>
+    <top-linearlayout border-width="0" margin="5px 10px">
+      <top-textview text-size="20px" margin="50px 0px 0px 0px" text="Your name : "></top-textview>
+      <top-textfield margin="0px 0px 0px 20px" data-model=&#x27;{"text":"user.name"}&#x27;></top-textfield>
+   </top-linearlayout>
+   <top-linearlayout border-width="0" margin="10px">
+      <top-textview text="Hello," text-size="24px"></top-textview>
+      <top-textview data-model=&#x27;{"text":"user.name"}&#x27; text-size="24px" text-color="blue" margin="0px 0px 0px 5px">
+    </top-textview>
+   </top-linearlayout>
+</html>
+
+<script>
+  var user = Top.Data.create({
+          name: ""
+  });
+</script>
+
+<데이터 바인딩 property>  
+
+data-model : data model과 DOM element 를 바인딩 해주는 속성이다.
+
+*data-model을 바인딩 할 때는 반드시 객체를 single-qoutes(&#x27;) 로 감싸 주어야 한다.
+
+*각 위젯의 자세한 property 와 template은 widgets란을 참조. 
+' rows="30"></top-textarea>

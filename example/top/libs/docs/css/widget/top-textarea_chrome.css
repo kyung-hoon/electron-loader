@@ -1,0 +1,20 @@
+/*!
+ * top-textarea_chrome
+ */
+
+.hwt-input {
+    display: block !important;
+    position: relative !important;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font: inherit;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    color: inherit !important;
+    -webkit-text-fill-color: transparent;
+}
+
+.hwt-input::placeholder {
+    -webkit-text-fill-color: #757575;
+}

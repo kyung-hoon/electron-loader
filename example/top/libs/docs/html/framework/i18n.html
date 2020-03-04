@@ -1,0 +1,60 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="i18n (internationalization)" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="Top.i18n을 통해 국제화 지원이 가능하다." margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="API" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="Top.i18n.load(settings)" text-size="16px" margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="미리 정의된 JSON 파일을 로드한다. settings의 구성은 다음과 같고, 로드하는 JSON 파일의 전체 경로는 [path]/[name]_[language].json 이다." margin="0px 10px 10px 25px"></top-textview>
+    <top-tableview items="frameworkData.framework_i18n_load" layout-width="500px" margin="10px 10px 10px 25px"></top-tableview>
+    <top-textview text="Top.i18n.t(key, params...)" text-size="16px" margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="입력한 key의 변환 값을 반환한다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="settings의 checkDefaultLanguage가 true일 경우에 한해, load 시 지정한 language에 해당 key의 값이 없을 경우 다음 예제와 같은 순서로 탐색한다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="(예제) message_ko_KR.json -> message_ko.json -> message.json" margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="필요할 경우 parameter 전달이 가능하다. (Example 참고)" margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="Top.i18n.onLoad(callback)" text-size="16px" margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="load가 완료되었을 때 callback(Function)을 등록할 수 있다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="Example" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="다음과 같이 세 개의 JSON 파일이 존재한다고 가정한다." margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="bundle/message.json" text-size="16px" margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='{
+    "hello": "hello",
+    "world": "world"
+}'></top-codeeditor>
+    <top-textview text="bundle/message_ko.json" text-size="16px" margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='{
+    "hi": "안녕",
+    "fruit": {
+        "apple": "사과"
+    }
+}'></top-codeeditor>
+    <top-textview text="bundle/message_ko_KR.json" text-size="16px" margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='{
+    "hello": "{0} 님, 안녕하세요."
+}'></top-codeeditor>
+    <top-textview text="다음과 같이 로드하여 사용할 수 있다. 지정한 language에 해당 값이 없을 경우 message_ko_KR.json -> message_ko.json -> message.json 순서로 탐색하여 값을 반환한다. (checkDefaultLanguage = true 설정 시)" margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="Parameter 전달이 가능하고, nested object를 지원한다." margin="0px 10px 10px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.i18n.load({
+    name: "message",
+    path: "bundle/",
+    language: "ko_KR",
+    callback: function() {
+        console.log(Top.i18n.t("hi"));              // 안녕
+        console.log(Top.i18n.t("world"));           // world
+        console.log(Top.i18n.t("hello", "티맥스")); // 티맥스 님, 안녕하세요.
+        console.log(Top.i18n.t("fruit.apple"));     // 사과
+    }
+});'></top-codeeditor>
+    <top-textview text="Top.App.create의 i18n 속성에 추가하여 앱 생성 시 로드하는 방법도 가능하다." margin="10px 10px 10px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='Top.App.create({
+    config: "config.json",
+    i18n: {
+        name: "message",
+        path: "bundle/",
+        language: "ko_KR",
+        callback: function() {
+            ...
+        }
+    }
+});'></top-codeeditor>
+    <top-textview text="다음과 같이 Top.i18n.t를 TOP 위젯 속성에서 바로 사용할 수 있다. (현재 text 속성에 한해 사용 가능)" margin="10px 10px 10px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='<top-textview text=&#x27;{{Top.i18n.t("hello","TOP")}}&#x27;></top-textview>'></top-codeeditor>
+</top-linearlayout>

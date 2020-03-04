@@ -1,0 +1,310 @@
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="chart" margin="30px 15px 15px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="10" margin="10px 10px 10px 10px" read-only="true" theme="dracula" text="{ chart : { 
+    type : string (line, spline, area, bar, column...),     // 차트의 type 설정
+    margin : [margin],                      // 차트의 margin
+    spacing : {top: number, right: number, bottom: number, left: number},         // 차트의 spacing
+    backgroundColor : color,                    // backgroundColor
+    borderColor : color,                    // border color 설정
+    borderRadius : number,                  // border의 radius 설정
+    borderWidth : number,                   // border의 width 설정
+    inverted : boolean,                     // 차트의 invert 여부를 설정 
+}}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="colors" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="2" margin="10px 10px 10px 10px" read-only="true" theme="dracula" text="{colors : array ['#XXXXXX','#XXX'],       // 각 series 별 color 설정
+theme : string ('colorSet1', 'colorSet2, 'status')      // 차트의 color theme 지정}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="title" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="10" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="title : {
+    align : string ('left', 'right', 'center'),                     // title의 horizontal position 결정
+    verticalAlign : string ('top', 'bottom'),                       // title의 vertical position 결정
+    text : string,                                  // text 설정
+    show : boolean,                                 // title을 표시하는 여부 설정
+    margin : { top : number, right : number, bottom : number, left : number },      // title의 margin
+    floating : boolean,                                 // floating을 할 것인지의 여부
+    x : number,                                     // X좌표 옵션
+    y : number,                                     // Y좌표 옵션
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="subtitle" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="10" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="subtitle : {
+    align : string ('left', 'right', 'center'),                     // subtitle의 horizontal position 결정
+    verticalAlign : string ('top', 'bottom'),                       // subtitle의 vertical position 결정
+    text : string,                                  // text 설정
+    show : boolean,                                 // subtitle을 표시하는 여부 설정
+    margin : { top : number, right : number, bottom : number, left : number },      // subtitle의 margin
+    floating : boolean,                                 // floating을 할 것인지의 여부
+    x : number,                                     // X좌표 옵션
+    y : number,                                     // Y좌표 옵션
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="xAxis" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="28" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="xAxis : {
+    max : number,   // x축의 maximum 설정
+    min : number,   // x축의 minimum 설정
+
+    show : boolean,                 // x축을 표시할 것인지 여부
+    type : string ('indexed', 'datetime'),      // x축을 단순 숫자 index로 할 것인지, datetime(시간 단위)으로 할 것인지
+    categories : [string],              // x축을 categories 로 사용자가 직접 구성
+    padding : { left : number, right : number },    // x축의 padding
+
+    tickTimeInterval : number,   // number ms(1/1000 초) 간격마다 tick을 찍습니다.
+    tickPixelInterval : number,     // tick 간의 pixel 간격
+
+    timeFormat : timeformat (%m 달, %d 월, %Y 년, %H 시각, %M 분, %S 초),  // x Axis의 type이 datetime일 경우, datetime 을 어떤 format으로 표현할 것인지
+
+    tick : {
+        fit : boolean,      // x축의 tick을 모든 데이터의 x에 맞게 만들어 줄 것인지의 여부
+        format : function(d){}, // x축의 tiock에 대한 format을 사용자가 custom 하게 설정
+        show : boolean,      // tick을 표시할 것인가에 대한 여부
+        multiline : boolean,     // tick multiline을 허용할 것인지에 대한 여부
+        limit : {
+            type : string ('collapse', 'strict'),   // collapse(default)일 경우 text가 8자 이상일 경우부터 count기능 동작. strict일 경우 바로 count기능 동작.
+            enabled : boolean,       // tick의 text가 길어질 경우, 일정 text만 보여주고, 나머지는 '...' 으로 표현
+            count : number      // 몇번째 글자부터 ...으로 표현할 것인지 설정
+        },
+        count : number,  // number 개수만큼 tick을 찍습니다.
+        from : 'start' or 'end',    // tickTimeInterval 을 사용시, 맨처음 틱을 기준으로 시간 간격을 찍을지, 맨 마지막 틱을 기준으로 시간 간격을 찍을지 선택
+        reset : boolean (default false),  // 차트 redraw시 tick 간격을 계산할 기준 tick을 최신화 할지 안할지의 여부
+        rotate : number (default 0),    // 차트 tick categories가 길 경우 세로로 회전하는 용도. (-90으로 설정하면 좋을 것.)
+    }
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="yAxis" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="20" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="yAxis : {
+    max : number,   // y축의 maximum 설정
+    min : number,   // y축의 minimum 설정
+    show : boolean, // y축을 표시할 것인지 여부
+
+    padding : { left : number, right : number },  // y축의 padding
+
+    threshold:{
+        color : 'RGB',      // threshold line 의 color
+        value : number      // threshold line를 삽입할 value
+    },
+
+    tick : {
+        value : [number, number,....],        // y축의 tick을 사용자가 수동으로 넣기
+        count : number,               // y축의 tick 개수 지정
+        format : function(d){},           // y축의 tiock에 대한 format을 사용자가 custom 하게 설정
+        integer : boolean,            // count 사용시, 소수점 허용 or 불허용
+        base : number                 // log 밑 수 설정
+    }
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="series" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="25" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="series : {
+    type : string,  // series 별 type 설정
+    name : string,  // series의 name 을 설정 (id로 사용됨)
+    data : [dataSet],   // series의 data를 배열, 또는 innerData 형식으로 입력
+    opacity : number,       // series view의 opaticy
+    color : 'colorValue', ('#XXX', '#XXXXXX')
+    events : {
+        click : function(d){    // chart의 해당 series  data를 click 했을시, 적용될 이벤트 설정
+            return custom;  ex) return console.log(d); - click 을 함으로써 data 정보 출력
+        },
+        select : function(d){   // chart의 해당 series  data를 select (drag로 선택) 했을시, 적용될 이벤트 설정
+            return custom;  ex) return console.log(d); - select 를 함으로써 data 정보 출력 
+        }
+    }
+
+    stack : string              // stack group을 설정 (같은 string 값을 가진 series 끼리 group을 이룬다)
+    stacking : string ( 'percent' or otherwise )// stacking 을 할 때 값을 절대값을 표현할 것인지, stack group내의 percent 로 표현할 것인지
+    marker : { 
+        enabled : boolean      // 해당 series를 표현하는 차트 그림에 marker를 표시할 것인지의 여부
+        shape: string('dot', 'circle', 'triangle-up', 'triangle-down', 'cross', 'diamond', 'square'),       // marker의 모양 선택
+        size: number,      // marker의 크기를 변경 (default 100, 더 크게 혹은 작게 가능)
+        fill: boolean,      // marker의 내부를 같은 색으로 채울지에 대한 여부
+        color : color value      // marker의 color 지정, (default는 시리즈 color와 같은색)
+    }
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="dataLabels" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="11" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="dataLabels : {
+    enabled : boolean,      // data label을 표시할 것인가                   
+    fontSize : string,      // data label의 font-size설정                      
+    format : {
+        title : function(d) {return custom},    // grouped mode일때, tooltip의 head 부분 format을 사용자가 custom 하게 설정 ex) return d + 'th';
+        name : function(d) {return custom}, // tooltip의 name 부분 (일반적으로 x값 표시)에 대한 format 변경
+        value : function(d) {return custom}, // tooltip의 value 부분 (일반적으로 y값 value 표시)에 대한 format 변경
+        single : string ('x (default)' or 'name')    // single tooltip에서 name부분을 x값으로 표현할지 series의 name으로 표현할지 선택
+    },
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="grid" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="11" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="grid : {
+    x : { 
+        show : boolean,     // x_grid 를 표시할 것인가
+        type : string ('tick')  // x_grid의 type
+    },                      
+    y : {
+        show : boolean,     // y_grid 를 표시할 것인가
+        ticks : number      // y_grid의 틱 수
+    },                      
+    focus : { show : boolean }  // grid의 focus 기능을 사용할 것인지의 여부
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="legend" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="36" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="legend : { 
+    enabled : boolean,      // legend 기능을 사용할 것인지의 여부
+    hide : boolean,     // legend를 숨길것인가에 대한 여부
+
+    x : number,         // legend container 의 x좌표 값
+    y : number,         // legend container 의 y좌표 값
+
+    align : string ('left', 'right', 'center'), // legend를 배치할 horizontal 위치
+    verticalAlign : string ('top', 'bottom'),   // legend를 배치할 vertical 위치
+    layout : 'horizontal' or 'vertical' ,   // legend를 정렬할 방향
+    pagination : boolean,   // true일 경우 많은 갯수의 legend를 한번에 보여주지 않고 page형식으로 보여줌. align은 center가 됨.
+
+    itemWidth : number,     // legend container의 width
+    itemDistance : number,  // legend 들 사이의 거리
+    symbolWidth : number,   // legend 안의 tile의 width
+    symbolHeight : number,  // legend 안의 tile의 height
+
+    itemMarginTop : number, // legend의 top 방향에 대한 margin
+    itemMarginBottom : number,  // legend의 bottom 방향에 대한 margin
+    padding : number,       // legend 전체의 padding
+
+    onclick : function(),       // legend를 클릭했을때 호출할 함수
+
+    item:{
+        onmouseover : function(),      // legend item영역에 mouse over 시 호출할 함수
+        onmouseout : function(),        // legend item영역에 mouse out 시 호출할 함수
+    },
+
+    itemSyle : {
+        color : color ('#xxxxxx'),  // tile의 color
+        cursor : string ('pointer'),    // cursor 모양
+        fontSize : pixel ('12px'),  // legend 내부 text의 font size 
+        fontWeight : string ('bold'),   // legend 내부 text의 font weight
+        x : number,         // legend 내부 text의 x축 좌표이동
+        y : number          // legend 내부 text의 y축 좌표이동
+    }
+}"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="tooltip" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="17" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="tooltip : {
+    show : boolean,     // tooltip을 표시할 것인지의 여부
+    grouped : boolean,      // tooltip을 'single mode'로 사용할 것인지, 'grouped mode' 사용할 것인지에 대한 여부 (false시, single mode)
+    reversed : boolean,     // tooltip의 화살표 방향 반전기능을 사용할 것인지에 대한 여부
+    inside : boolean,       // tooltip이 차트의 바깥영역에 배치되는 것을 허용할 지에 대한 여부
+    positioningType : string ('default' or 'mouse'), // tooltip이 point에 배치될 것인지 마우스에 배치될 것인지에 대한 여부
+    limit : object,     // tooltip의 position 영역 제한. ex) { left : 0, top : -10 }
+
+    format : {
+        title : function(d) {return custom},    // grouped mode일때, tooltip의 head 부분 format을 사용자가 custom 하게 설정 ex) return d + 'th';
+        name : function(d) {return custom}, // tooltip의 name 부분 (일반적으로 x값 표시)에 대한 format 변경
+        value : function(d) {return custom}, // tooltip의 value 부분 (일반적으로 y값 value 표시)에 대한 format 변경
+        single : string ('x (default)' or 'name')    // single tooltip에서 name부분을 x값으로 표현할지 series의 name으로 표현할지 선택
+    },
+
+    onmouse : {
+        enabled: boolean        // tooltip에 hover 해도 툴팁이 꺼지지 않도록 설정
+        onclick: boolean        // tooltip을 click 하면 tooltip type 변경(singel/group)
+    }
+}"></top-codeeditor>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="credits" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="5" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="credits : {
+        enabled : boolean (default false),      // credits 활성화
+        href : string,      // credits 클릭시 연결할 링크
+        text : string       // credits text
+    }"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="noData" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="14" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="noData : {
+        text : sting (default ''),      // 차트에 data가 없을시 화면에 출력할 text
+        position : {
+            x : number,         // noData x좌표 변경
+            y : number,         // noData y좌표 변경
+            align : string ('center(default)', 'left', 'right'),                // 수평 정렬
+            verticalAlign : string ('middle(default)', 'top', 'bottom')     // 수직 정렬
+        },
+        style : {
+            fontWeight : string (default 'bold'),   // noData font weight
+            fontSize : string (default '12px'),     // noData font size
+            color : string ('#XXXXXX')             // noData font color
+        }
+    }"></top-codeeditor>
+</top-linearlayout>
+
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="depend on type" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="23" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="bar : {
+    width : {
+        ratio : number (default : 0.7)      // bar 차트에서 bar 의 좌우 폭 비율
+    }
+}
+
+pie : { expand : boolean (default : true) }     // pie 차트에서 확대 효과 사용 여부
+
+angular : {
+    gauge : {                       
+        min : number (default : 0),         // angular-gauge 차트에서 value의 min, max 값
+        max : number (default : 100),
+        expand : boolean (default : true)       // angular-gauge 차트에서 확대 효과 사용 여부
+    }
+}
+
+gauge : {
+    min : number (default : 0),         // 일반적인 gauge 차트에서 value의 min, max 값
+    max : number (default : 100),
+    breaks : [num, num, num]        // 게이지에서 색깔이 바뀌는 영역
+}
+
+donut : { 
+        expand : boolean (default : true),       // donut 차트에서 확대 효과 사용 여부
+        semiCircle : boolean (default : false)      // donut차트를 circle / semi-circle 형태로 나타낼 것인지 여부
+}"></top-codeeditor>
+</top-linearlayout>
+
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="transition" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="7" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="transition : 
+        {
+            duration : number       // transition 실행시간
+        },
+shift : {
+            duration : number       // shift 동작 수행 시간
+       }"></top-codeeditor>
+</top-linearlayout>
+
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-textview text="slider" margin="40px 15px 5px 15px" text-size="34px"></top-textview>
+    <top-codeeditor rows="9" margin="10px 10px 10px 10px" read-only="true" theme="dracula"  text="slider : {
+    enabled : boolean,             // slider 사용의 유무
+    start : [number, number],      // slider의 초기값 설정 (default 존재)
+    margin : number,              // handle 사이의 최대 접근 거리 설정 (default 존재)
+    mode : string 'flow (default)', 'reset', 'stay(예정)' ,     // 동적 api 사용시, slider의 range 상태변경 모드
+    * reset : 차트가 update될 때, rangeSlider의 범위를 차트 전역으로 변경합니다.
+    * flow : 차트가 update될 때, rangeSlider의 범위가 update 되기전 범위와 동일하게 유지됩니다.
+    onupdate : function (values, handle),                  // slider가 update 될때 불려지는 이벤트 함수   
+}"></top-codeeditor>
+</top-linearlayout>

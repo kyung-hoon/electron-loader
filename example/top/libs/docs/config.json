@@ -1,0 +1,11 @@
+{
+    "name": "TOP.js",
+    "version": "1.0.0",
+    "developer": "Tmax",
+    "indexPageId": "page_intro",
+    "js": ["js/data.js", "js/example.js", "js/logic.js", "libs/jquery-ui.min.js"],
+    "css": ["libs/jquery-ui.min.css"],
+    "jsPath": "js",
+    "resPath": "./res",
+    "theme": ""
+}

@@ -1,0 +1,46 @@
+<script>
+	var test_items = [
+		{"name":"Kim", "age":"20", "location":"Seoul"},
+		{"name":"Lee", "age":"25", "location":"Busan"},
+		{"name":"Park", "age":"30", "location":"Incheon"},
+		{"name":"Choi", "age":"35", "location":"Bundang"},
+		{"name":"Jung", "age":"40", "location":"Daegu"}
+	];
+	var test_nodes = [{text:"Seoul",value:"su"},{text:"Incheon",value:"ic"},{text:"Bundang",value:"bd"},{text:"Daegu",value:"dg"},{text:"Busan",value:"bs"}];
+	var test_header_option={
+		"0":{
+			"index":{"layout-width":"100px",text:"인덱스컬럼",reverse:true,visible:true},
+			"0":{text:"이름", "layout-width":"100px"},
+			"1":{text:"나이", "layout-width":"150px"},
+			"2":{text:"지역", "layout-width":"200px"},
+		}
+	}
+	var test_column_option = {
+	    "0": {
+	      text:"{name}",
+	        width: "20%",
+	        align: "left"
+	    },
+	    "1": {
+	        type: "textfield",
+	        property: {
+	          "layout-width": "50%",
+						"text":'{age}',
+	        },
+	        width: "50%",
+	    },
+	    "2": {
+	        type: "selectbox",
+	        property: {
+	          "layout-width": "100%",
+	          "selected-text":'{location}',
+	            "nodes": test_nodes,
+	        },
+	    }
+	};
+</script>
+<top-linearlayout horizontal-alignment="center" border-width="0px">
+    <top-tableview class="table_01" column-resize="fixed"  layout-width="33%" layout-height="300" items="test_items"></top-tableview>
+    <top-tableview class="table_02" column-resize="fixed"  layout-width="33%" items="test_items" paginate="true" page-length="3"></top-tableview>
+    <top-tableview class="table_03" column-resize="auto" layout-width="33%" items="test_items" header-option="test_header_option" column-option="test_column_option"></top-tableview>
+</top-linearlayout>

@@ -1,0 +1,19 @@
+/*!
+ * top-textarea_ie
+ */
+
+.hwt-input {
+    display: block !important;
+    position: relative !important;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font: inherit;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    color: transparent !important;
+}
+
+.hwt-input:-ms-input-placeholder {
+   color: #757575 !important;
+}

@@ -1,0 +1,311 @@
+/*!
+ * top-sidemenu
+ */
+
+top-sidemenu {
+    box-sizing: border-box;
+    /* Sidebar Styles */
+}
+
+top-sidemenu #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+top-sidemenu #wrapper.toggled {
+    padding-left: 0px;
+}
+
+top-sidemenu #sidebar-wrapper {
+    box-sizing: border-box;
+    font-size: 12px;
+    z-index: 1000;
+    position: absolute;
+    left: 200px;
+    width: 0;
+    height: 100%;
+    margin-left: -200px;
+    overflow-y: auto;
+    background-color: #49515d;
+    border: 1px solid #0f2c53;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+top-sidemenu #wrapper.toggled #sidebar-wrapper {
+    width: 200px;
+}
+
+top-sidemenu #page-content-wrapper {
+    position: absolute;
+    padding: 15px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+top-sidemenu .xyz {
+    min-width: 360px;
+}
+
+top-sidemenu #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0px;
+}
+
+top-sidemenu .fixed-brand {
+    width: auto;
+}
+
+top-sidemenu .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+top-sidemenu .sidebar-nav ul {
+    margin-left: -40px;
+    padding-left: 40px;
+}
+
+top-sidemenu .sidebar-nav li {
+    size: 14px;
+    font-weight: 600;
+    color: #333333;
+    background-color: #4e5866;
+    text-indent: 15px;
+    line-height: 50px;
+}
+
+top-sidemenu .sidebar-nav li:hover,
+top-sidemenu .sidebar-nav li:active {
+    color: #ffffff;
+    background-color: #5073a0;
+}
+
+top-sidemenu i {
+    vertical-align: middle;
+}
+
+top-sidemenu .sidebar-nav li a {
+    size: 14px;
+    font-weight: 600;
+    color: #333333;
+    text-indent: 15px;
+    line-height: 50px;
+}
+
+top-sidemenu .sidebar-nav li a:hover,
+top-sidemenu .sidebar-nav li a:active {
+    color: #ffffff;
+}
+
+top-sidemenu .sidebar-nav li ul li span {
+    padding-left: 30px;
+}
+
+top-sidemenu .sidebar-nav li ul li {
+    size: 12px;
+    font-weight: 600;
+    color: #e3e3e3;
+    background-color: #49515d;
+    line-height: 30px;
+}
+
+top-sidemenu .sidebar-nav li ul li:hover,
+top-sidemenu .sidebar-nav li ul li:active {
+    color: #ffffff;
+    background-color: #39404b;
+}
+
+top-sidemenu .sidebar-nav li ul li a {
+    size: 12px;
+    font-weight: 600;
+    color: #e3e3e3;
+    line-height: 40px;
+}
+
+top-sidemenu .sidebar-nav li ul li a:hover,
+top-sidemenu .sidebar-nav li ul li a:active {
+    color: #ffffff;
+}
+
+top-sidemenu .sidebar-nav li ul li ul li span {
+    padding-left: 45px;
+}
+
+top-sidemenu .sidebar-nav li ul li ul li {
+    size: 12px;
+    font-weight: 600;
+    color: #e3e3e3;
+    background-color: #49515d;
+    line-height: 26px;
+}
+
+top-sidemenu .sidebar-nav li ul li ul li:hover,
+top-sidemenu .sidebar-nav li ul li ul li:active {
+    color: #4085ee;
+    background-color: #39404b;
+}
+
+top-sidemenu .sidebar-nav li ul li ul li a {
+    size: 12px;
+    font-weight: 600;
+    color: #e3e3e3;
+    text-indent: 15px;
+    line-height: 40px;
+}
+
+top-sidemenu .sidebar-nav li ul li ul li a:hover,
+top-sidemenu .sidebar-nav li ul li ul li a:active,
+top-sidemenu .sidebar-nav li ul li ul li a.active {
+    color: #4085ee;
+}
+
+top-sidemenu .sidebar-nav li a {
+    text-decoration: none;
+}
+
+top-sidemenu .sidebar-nav>.sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+top-sidemenu .sidebar-nav>.sidebar-brand a {
+    color: #999999;
+}
+
+top-sidemenu .sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+top-sidemenu .no-margin {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    top-sidemenu #wrapper {
+        padding-left: 200px;
+    }
+    top-sidemenu .fixed-brand {
+        width: 200px;
+    }
+    top-sidemenu #wrapper.toggled {
+        padding-left: 0;
+    }
+    top-sidemenu #sidebar-wrapper {
+        width: 200px;
+    }
+    top-sidemenu #wrapper.toggled #sidebar-wrapper {
+        width: 200px;
+    }
+    top-sidemenu #wrapper.toggled-2 #sidebar-wrapper {
+        width: 50px;
+    }
+    top-sidemenu #wrapper.toggled-2 #sidebar-wrapper:hover {
+        width: 200px;
+    }
+    top-sidemenu #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    top-sidemenu #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        padding-left: 200px;
+    }
+    top-sidemenu #wrapper.toggled-2 #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        margin-left: -200px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: auto;
+    }
+}
+
+top-sidemenu li .fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 3em;
+    vertical-align: middle;
+}
+
+top-sidemenu li ul li .fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+top-sidemenu .fa-lg {
+    font-size: 1.33333333em;
+}
+
+top-sidemenu .pull-left {
+    float: left;
+}
+
+top-sidemenu .color_g:before {
+    color: #73b944;
+}
+
+top-sidemenu .color_b:before {
+    color: #4085ee;
+}
+
+top-sidemenu .color_gray:before {
+    color: #dbe1e9;
+}
+
+top-sidemenu .color_r:before {
+    color: #ff0000;
+}
+
+top-sidemenu .color_db:before {
+    color: #004b8d;
+}
+
+top-sidemenu .color_dgray:before {
+    color: #333333;
+}
+
+top-sidemenu .icon10px:before {
+    font-size: 10px;
+}
+
+top-sidemenu .icon12px:before {
+    font-size: 12px;
+}
+
+top-sidemenu .icon20px:before {
+    font-size: 20px;
+}
+
+top-sidemenu .icon32px:before {
+    font-size: 32px;
+}

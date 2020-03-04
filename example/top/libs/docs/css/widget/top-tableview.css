@@ -1,0 +1,577 @@
+/*!
+ * top-tableview
+ */
+
+top-tableview>div {
+    display: inline-block;
+    text-align: left;
+}
+.auto-pagination{
+  float: left;
+}
+
+.seqbox {
+    height: 35px;
+    display: inline-block;
+    color: red;
+    margin: 0px;
+    padding: 0px;
+    font-size: 10pt;
+    right: 15px;
+    text-align: right;
+    line-height: inherit;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.vibar {
+    width: 13px;
+    padding: 0px 1px 0px 1px;
+    position: relative;
+    background-color: #eeeeee;
+    right: 0px;
+}
+
+.viframe {
+    width: 15px;
+    height: 320px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.viscroll {
+    width: inherit;
+    height: 5px;
+    position: absolute;
+    background-color: #aaaaaa;
+}
+
+.vibar:active {
+    background-color: #dddddd;
+}
+
+.vidownbtn:active,
+.viupbtn:active,
+.viscroll:active {
+    background-color: #888888;
+}
+
+
+/*0817 linear 내부 a태그의 text정렬*/
+.body-cell span.top-textview-root {
+    line-height: 2.5;
+}
+
+.top-tableview-root {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.top-tableview-scroll {
+    position: relative;
+}
+
+.top-tableview {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    position: relative;
+}
+
+.top-tableview.multiple-header {}
+
+.head .sorting_asc,
+.head .sorting_desc,
+.head .sorting_asc_disabled,
+.head .sorting_desc_disabled {
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.head .sorting {
+    background-image: url("images/sort_both.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.head .sorting_asc {
+    background-image: url("images/sort_asc.png");
+}
+
+.head .sorting_desc {
+    background-image: url("images/sort_desc.png");
+}
+
+.head .sorting_asc_disabled {
+    background-image: url("images/sort_asc_disabled.png");
+}
+
+.head .sorting_desc_disabled {
+    background-image: url("images/sort_desc_disabled.png");
+}
+
+top-tableview[disabled="true"] .top-tableview,
+top-tableview[disabled="true"] .top-tableview * {
+    cursor: not-allowed;
+    background-color: #e9e9e9;
+}
+
+
+.top-tableview .body {
+    /*.body-row:first-child td {
+                   border-top: none;
+               }*/
+}
+
+.top-tableview .body .empty .body-cell {
+    color: grey;
+    text-align: center;
+}
+
+.top-tableview-empty {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.top-tableview-pager {
+    display: inline-block;
+    text-align: right;
+    margin: 5px 0px;
+    vertical-align: middle;
+}
+
+.top-tableview-pager .top-selectbox-container {
+    height: 26px;
+    font-size: 12px;
+}
+
+
+.top-tableview-result {
+    display: inline-block;
+    text-align: right;
+    min-width: 65px;
+    height: 26px;
+    font-size: 11px;
+    margin: 5px 0px;
+    border-right: 1px solid #dbdfe1;
+    vertical-align: middle;
+}
+
+.top-tableview-result>* {
+    position: relative;
+    line-height: 26px;
+}
+
+.top-tableview-result>.number {
+    color: #275cb9;
+    font-weight: 600;
+}
+
+.top-tableview-result> :not(.number) {
+    padding-right: 10px;
+}
+
+.top-tableview-root>div {
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+
+.top-tableview-length {
+    display: inline-block;
+    margin: 5px 0px;
+    padding-top: 0;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.top-tableview-length select {
+    background-color: #fbfbfb;
+    border-radius: 2px;
+    border: 1px solid #dce3f0;
+    height: 26px;
+}
+
+.top-tableview-length select:focus {
+    color: #1c458d;
+    border: 1px solid #3e75c7;
+}
+
+.top-tableview-length select:hover {
+    background-color: #dde8f7;
+}
+
+.top-tableview-length select option {
+    color: #333;
+    background-color: #fff;
+}
+
+.top-tableview-length select option:hover {
+    background-color: #dde8f7;
+}
+
+.top-tableview-grips {
+    height: 0px;
+    position: relative;
+}
+
+.top-tableview-grips>.top-tableview-resizer {
+    /*margin-left: -5px;리사이져 중심이 살짝벗어남 1004*/
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    cursor: col-resize;
+}
+
+top-tableview .body,
+    {
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+top-tableview .body .selected,
+.body .selected>td {
+    background-color: #d6e8ff;
+    /*font-weight: bold;*/
+}
+
+.incapable_column,
+.incapable_header {
+    cursor: not-allowed;
+    background-color: #f3f4f5 !important;
+}
+
+.body>.body-row {
+    background-color: #ffffff;
+    height: 35px;
+}
+
+.body>.body-cell:active {
+    background-color: #d6e8ff;
+    color: #0043a7;
+    font-weight: bold;
+}
+
+.body-row:hover,
+.body-row:hover>td,
+.body-row:hover>.selected {
+    background-color: #edf5ff;
+    color: #0043a7;
+}
+
+
+/*top-tableview > *{
+  float: left;
+}*/
+
+.fixed_frame {
+    overflow-x: visible;
+    overflow-y: hidden;
+    float: left;
+}
+
+.top-tableview-wrapper {}
+
+.top-tableview-scroll {
+    width: 100%;
+    float: left;
+    position: relative;
+    /*top scroll의 위치잡는데 중요한 속성*/
+}
+
+.fixed_frame>table {
+    table-layout: fixed;
+    width: inherit;
+}
+
+.top-tableview-resizer {}
+
+.previous .body-cell {
+    border-bottom: none;
+}
+
+.body .body-row:first-child>.body-cell {
+    border-top: none;
+}
+
+.indexable {
+    text-align: center;
+}
+
+/*.top-tableview .body .body-cell,선택자수정*/
+.body .body-cell,
+.body-cell-custom,
+.body-cell-dummy {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    border-bottom: 1px solid #f3f4f5;
+    border-top: 1px solid #f3f4f5;
+    border-right: 1px solid #f3f4f5;
+    /*height: 30px;*/
+    height: inherit;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    padding: 0px 14px;
+}
+
+.body .body-cell.checkable {
+    text-align: center;
+    user-select: none;
+}
+
+.body .body-cell .top-menu-root {
+    z-index: 0;
+    position: initial;
+}
+
+.body .body-cell .top-tableview-edit_input {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #d3dbdf;
+    border-radius: 2px;
+    color: #333;
+    padding: 3px 8px;
+}
+
+.body .body-cell .top-tableview-edit_input:focus {
+    border: 1px solid #66afe9;
+    color: #1c458d;
+}
+
+
+.top-tableview-empty {
+    font-size: 15px;
+}
+
+
+.drag-selection {
+    position: absolute;
+    border: 1px solid #0043a7;
+    background-color: #d6e8ff;
+}
+
+.top-tableview-root .top-button-root {
+  min-height: 25px;
+  padding:8px 12px 8px 12px;
+}
+
+.body-cell .basic_02>.top-button-root {
+    padding: 7px 13px 8px 15px;
+}
+
+.head-cell .top-checkbox-text {
+    color: #357fd2;
+    font-size: 12px;
+}
+
+.head .head-cell {
+    text-align: center;
+    outline: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 14px;
+    color: #357fd2;
+    font-weight: 600;
+    font-size: 12px;
+    height: 38px;
+    border-top: 1px solid #dbdfe1;
+    border-bottom: 1px solid #dbdfe1;
+    border-right: 1px solid #dbdfe1;
+    background-color: #ffffff;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.head .head-cell:active {
+    outline: none;
+}
+
+.head .head-row.previous .head-cell {
+    border-bottom: 1px solid #4386e1;
+}
+
+.head .head-cell:first-child:not(.no-border-left) {
+    border-left: 1px solid #dbdfe1;
+}
+
+.head .head-cell:last-child {
+    border-right-color: #dbdfe1;
+}
+
+.body .body-cell:first-child {
+    border-left: 1px solid #f3f4f5;
+}
+
+.head  .head-cell:first-child {
+    border-left: 1px solid #dbdfe1;
+}
+
+.body .body-cell::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.body .body-cell.no_separator::before {
+    border-right: none;
+}
+
+top-linearlayout.openDialogTreeWrapper>div,
+top-linearlayout.openDialogBtnWrapper>div {
+    display: block !important;
+}
+
+.table_01 {
+    position: relative;
+}
+
+top-tableview top-icon {
+    font-size: 0px;
+}
+
+.top-tableview-pager .top-selectbox-root {
+    display: inline-block;
+}
+
+#tableHeaderSaveBtn>.top-button-root {
+    padding: 10px 20px;
+}
+
+.tableHeaderTree>div {
+    max-width: unset !important;
+    width: 100%;
+}
+
+.openDialog .top-dialog-content {
+    overflow: auto;
+}
+
+div#tableHeaderDialogMain {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+}
+
+.tableHeaderTree .top-treeview-root {
+    overflow-x: auto;
+}
+
+.header_required {
+    color: #ff0000;
+    margin-right: 5px;
+}
+
+.headercolumn_tree.super {
+  background-color: orange !important;
+}
+
+.headercolumn_tree.same {
+  border-bottom: 3px dotted orange!important;
+}
+
+.column_tree.super {
+  background-color: orange!important;
+}
+
+.column_tree.same {
+  border-bottom: 3px dotted orange!important;
+}
+
+.headerfilter .headerfilter-common .top-button-root {
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 10px;
+    color: #88b0e2;
+    background-color: #ffffff;
+    padding: 2px 0px 2px 0px;
+    display: inline-block;
+}
+
+.headerfilter .headerfilter-common .top-button-root:hover {
+    background-color: #dde8f7;
+}
+
+.headerfilter .headerfilter-common .top-button-root:focus {
+    color: #0175bc;
+    background-color: #dde8f7;
+}
+
+.headerfilter_disable .headerfilter-common .top-button-root {
+    display: none;
+}
+
+.headerfilter_search .top-button-root {
+    min-width: 26px;
+    min-height: 30px;
+    font-size: 15px;
+    padding: 0px;
+}
+
+.headerfilter_search .top-button-icon.left,
+.top-button-image.left {
+    margin-right: 0px;
+}
+
+.headerfilter_ok .top-button-root {
+    min-width: 66px;
+    min-height: 27px;
+    background-color: #4085ee;
+    border-radius: 2px;
+    padding: 0px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.headerfilter_cancel .top-button-root {
+    min-width: 66px;
+    min-height: 27px;
+    background-color: #ffffff;
+    border: 1px solid #677e9a;
+    border-radius: 2px;
+    padding: 0px;
+    color: #536882;
+    font-weight: 600;
+    font-size: 13px;
+}

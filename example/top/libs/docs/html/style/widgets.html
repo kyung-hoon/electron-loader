@@ -1,0 +1,44 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Widget" text-size="30px" text-style="bold" margin="10px 10px 0px 50px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout border-width="0" margin="0px 0px 0px 50px" orientation="vertical">
+        <top-textview text="TOP.js 의 모든 위젯은 Tmax Common Guideline에 따라 기본적인 Style이 적용되어 있습니다." text-size="15px" margin="10px"></top-textview>
+        <top-textview text="기본 위젯의 Style을 Customizing 하고 싶은 경우 해당 위젯의 className을 select 하여 바꿀 수 있습니다." text-size="15px" margin="0 10px 10px 10px"></top-textview>
+        <top-textview text="<<Example>>" text-style="bold" margin="10px"></top-textview>
+        <top-codeeditor rows="9" text='<top-button id="redButton" text="redButton" margin="5px"></top-button>
+<top-button id="bluegrayButton" class="bluegray" text="bluegrayButton" margin="5px"></top-button>
+
+<style>
+  #redButton .top-button-root {
+      background-color: red;
+  }
+</style>
+' read-only="true" margin="5px"></top-codeeditor>
+        <top-linearlayout orientation="horizontal" margin="5px" border-width="0">
+            <top-button id="redButton" text="redButton" margin="5px"></top-button>
+            <top-button id="bluegrayButton" class="bluegray" text="bluegrayButton" margin="5px"></top-button>
+        </top-linearlayout>
+    </top-linearlayout>
+    <top-linearlayout horizontal-alignment="left" border-width="0px" margin="80px 50px 0px 50px">
+        <top-textview text="CSS selector Rule for Shadow DOM in TOP.js" text-size="30px" text-style="bold"></top-textview>
+    </top-linearlayout>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout horizontal-alignment="left" border-width="0px" margin="30px 0px 30px 50px" orientation="vertical">
+        <top-linearlayout border-width="0">
+            <top-textview text="Shadow DOM은 " text-size="15px" margin="0 5px 0 0"></top-textview>
+            <top-textview text="::shadow " text-color="#004b8d" text-style="bold" text-size="15px" margin="0 5px 0 0"></top-textview>
+            <top-textview text="혹은  " text-size="15px" margin="0 5px 0 0"></top-textview>
+            <top-textview text="/deep/ " text-color="#004b8d" text-style="bold" text-size="15px" margin="0 5px 0 0"></top-textview>
+            <top-textview text="selector를 통해 접근할 수 있습니다. " text-size="15px"></top-textview>
+        </top-linearlayout>
+        <top-textview text-style="bold" text=" ::shadow selector를 사용하실 경우, Base Widget은 ::shadow selector 붙여서 접근하지만, 
+        TabLayout&Container widget은 root만 ::shadow를 통해 접근하고, 하위 엘리먼트들은 ::shadow selector를 생략한 뒤 접근합니다. " text-size="15px"></top-textview>
+        <top-textview text-style="bold" text=" /deep/ selector를 사용하실 경우, 모든 위젯의 tagName 뒤에 /deep/ selector를 붙여서 접근합니다." text-size="15px"></top-textview>
+        <top-imageview src="res/className.png" margin="20px 10px 0 0"></top-imageview>
+    </top-linearlayout>
+</top-linearlayout>
+<style>
+#redButton::shadow .top-button-root {
+    background-color: red;
+}
+</style>

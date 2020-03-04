@@ -1,0 +1,100 @@
+<top-linearlayout controller="widgetInfoController" padding="20px 40px 20px 40px" orientation="vertical" border-width="0">
+    <top-linearlayout orientation="horizontal" border-width="0px" margin="0px 0px 20px 0px">
+        <top-textview layout-vertical-alignment="middle" text="Version:" text-size="16px" margin="0px 10px 0px 0px"></top-textview>
+        <top-selectbox id="version_box" layout-vertical-alignment="middle" title="Version" data-model='{"nodes": "docsData.version_list"}' selected-index="0" on-change="onVersionChange"></top-selectbox>
+    </top-linearlayout>
+    <top-panel title="Overview" margin="0px 0px 20px 0px">
+        <top-textview data-model='{"text": "docsData.namespace"}' text-style="bold" text-size="24px" margin="0p"></top-textview><br>
+        <top-textview id='overview' data-model='{"text": "docsData.overview"}' opacity="0.8" multi-line="true" text-size="14px"></top-textview>
+    </top-panel>
+    <top-panel title="Example" margin="0px 0px 20px 0px">
+        <top-linearlayout id="example_view" border-width="0px" margin="0px 0px 20px 0px" orientation="vertical"></top-linearlayout>
+        <top-layout>
+            <top-codeeditor id="example_editor" read-only="true" theme="dracula" layout-width="100%" mode="htmlmixed" text=""></top-codeeditor>
+        </top-layout>
+    </top-panel>
+    <top-panel title="Properties" margin="0px 0px 20px 0px" padding="0px">
+        <top-tableview layout-width="wrap_content" layout-height="wrap_content" layout-horizontal-alignment="left" border-width="0px" horizontal-scroll="false" vertical-scroll="false" data-model='{"items": "docsData.property"}' separator-visible="true" virtual-scroll="false" item-clicktype="click" sortable="false" column-reorder="false" sequence="false" paginate="false" select-type="row" editable="false">
+            <div class="top-tableview-root">
+                <top-rowitem layout-width="match_parent" border-width="0px">
+                    <top-columnitem border-width="0px" text="{property}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{description}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{default}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{example}">
+                    </top-columnitem>
+                </top-rowitem>
+                <top-tableheader layout-width="match_parent" border-width="0px">
+                    <top-headerrow layout-width="match_parent" border-width="0px">
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Property" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Description" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Default" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Example" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                    </top-headerrow>
+                </top-tableheader>
+            </div>
+        </top-tableview>
+    </top-panel>
+    <top-panel title="Events" margin="0px 0px 20px 0px" padding="0px">
+        <top-tableview layout-width="wrap_content" layout-height="wrap_content" layout-horizontal-alignment="left" border-width="0px" horizontal-scroll="false" vertical-scroll="false" data-model='{"items": "docsData.event"}' separator-visible="true" virtual-scroll="false" item-clicktype="click" sortable="false" column-reorder="false" sequence="false" paginate="false" select-type="row" editable="false">
+            <div class="top-tableview-root">
+                <top-rowitem layout-width="match_parent" border-width="0px">
+                    <top-columnitem border-width="0px" text="{event}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{description}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{callback}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{example}">
+                    </top-columnitem>
+                </top-rowitem>
+                <top-tableheader layout-width="match_parent" border-width="0px">
+                    <top-headerrow layout-width="match_parent" border-width="0px">
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Event" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Description" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Callback" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Example" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                    </top-headerrow>
+                </top-tableheader>
+            </div>
+        </top-tableview>
+    </top-panel>
+    <top-panel title="Methods" margin="0px" padding="0px">
+        <top-tableview layout-width="wrap_content" layout-height="wrap_content" layout-horizontal-alignment="left" border-width="0px" horizontal-scroll="false" vertical-scroll="false" data-model='{"items": "docsData.method"}' separator-visible="true" virtual-scroll="false" item-clicktype="click" sortable="false" column-reorder="false" sequence="false" paginate="false" select-type="row" editable="false">
+            <div class="top-tableview-root">
+                <top-rowitem layout-width="match_parent" border-width="0px">
+                    <top-columnitem border-width="0px" text="{method}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{description}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{parameter}">
+                    </top-columnitem>
+                    <top-columnitem border-width="0px" text="{return}">
+                    </top-columnitem>
+                </top-rowitem>
+                <top-tableheader layout-width="match_parent" border-width="0px">
+                    <top-headerrow layout-width="match_parent" border-width="0px">
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Method" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Description" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Parameter" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                        <top-headercolumn layout-width="match_parent" border-width="0px" text="Return" sortable="false" editable="false" headerfilter="false" checked="false" type="normal" textposition="right" header-control="none" header-control-visible="false">
+                        </top-headercolumn>
+                    </top-headerrow>
+                </top-tableheader>
+            </div>
+        </top-tableview>
+    </top-panel>
+</top-linearlayout>

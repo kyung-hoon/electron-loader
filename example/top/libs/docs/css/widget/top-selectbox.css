@@ -1,0 +1,164 @@
+/*!
+ * top-selectbox
+ */
+
+top-selectbox .top-selectbox-root {
+    display: inline-flex;
+    font-weight: normal;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-selectbox .top-selectbox-container {
+    outline: none;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background-image: none;
+    padding-left: 10px;
+    font-size: inherit;
+    line-height: 28px;
+    color: inherit;
+    background-color: #fbfbfb;
+    border-radius: 2px;
+    border: 1px solid #dce3f0;
+    overflow: hidden;
+    cursor: default;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+top-selectbox .top-selectbox-container.active {
+    color: #1c458d;
+    border: 1px solid #3e75c7;
+}
+
+top-selectbox .top-selectbox-container:hover {
+    background-color: #dde8f7;
+}
+
+top-selectbox .top-selectbox-container .top-selectbox-icon {
+    float: right;
+    line-height: 30px;
+    padding: 0 10px 0 10px;
+    font-size: 7px;
+    color: #333;
+}
+
+top-selectbox .top-selectbox-container .top-selectbox-icon.icon-arrow_filled_down:before {
+    content: "\e911";
+    font-family: "tmaxop";
+}
+
+top-selectbox .top-selectbox-container .top-selectbox-icon.icon-arrow_filled_up:before {
+    content: "\e914";
+    font-family: "tmaxop";
+}
+
+top-selectbox .top-selectbox-options {
+    display: none;
+    list-style: none;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    border-radius: 2px;
+    border: 1px solid #3e75c7;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 10;
+    width: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+top-selectbox .top-selectbox-option {
+    outline: none;
+    color: #333;
+    background-color: #ffffff;
+    height: inherit;
+    line-height: inherit;
+    text-align: left;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    min-height: 30px;
+}
+
+top-selectbox .top-selectbox-option:hover {
+    background-color: #dde8f7;
+}
+
+top-selectbox .top-selectbox-option.active,
+top-selectbox .top-selectbox-option:active,
+top-selectbox .top-selectbox-option:focus {
+    background-color: #4085ee;
+    color: #fff;
+}
+
+top-selectbox .top-selectbox-option.title {
+    border-bottom: 1px dashed #d6d6d6;
+    color: #9c9c9c;
+    background-color: #fbfbfb;
+    cursor: default;
+    font-style: italic;
+}
+
+top-selectbox .top-selectbox-option.disabled {
+    color: #9c9c9c;
+    background-color: #fbfbfb;
+    cursor: not-allowed;
+}
+
+top-selectbox .top-selectbox-option.seperated {
+    border-bottom: 1px dashed #d6d6d6;
+}
+
+top-selectbox .top-selectbox-option:first-child {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+top-selectbox .top-selectbox-option:last-child {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+top-selectbox label {
+    cursor: pointer;
+}
+
+top-selectbox[disabled] .top-selectbox-container,
+top-selectbox[readonly] .top-selectbox-container,
+fieldset[disabled] top-selectbox .top-selectbox-container {
+    color: #c1c1c1;
+    background-color: #f1f1f1;
+    border: 1px solid #c1c1c1;
+    opacity: 1;
+}
+
+top-selectbox[disabled="true"] .top-selectbox-container {
+    cursor: not-allowed;
+    background-color: #e9e9e9;
+}
+
+top-selectbox[disabled],
+fieldset[disabled] top-selectbox {
+    cursor: not-allowed;
+}
+
+top-selectbox.violet select:focus {
+    border: 1px solid #6a6aa6;
+    color: #6a6aa6;
+}
+
+top-selectbox.bluegray select:focus {
+    border: 1px solid #4f6482;
+    color: #4f6482;
+}

@@ -1,0 +1,26 @@
+/*!
+ * top-tableview_ie
+ */
+ .viupbtn
+ {
+   background: url(fonts/upbtn_ie.png) no-repeat;
+    background-position: center;
+   width: 15px;
+   height: 15px;
+   position: relative;
+   background-color: #eeeeee;
+   right: 0px;
+   top: 0px;
+ }
+
+ .vidownbtn
+ {
+   background: url(fonts/downbtn_ie.png) no-repeat;
+    background-position: center;
+   width: 15px;
+   height: 15px;
+   position: relative;
+   background-color: #eeeeee;
+   right: 0px;
+   bottom:0px;
+ }

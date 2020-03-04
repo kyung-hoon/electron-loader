@@ -1,0 +1,80 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Routing" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="라우팅은 설정, 실행, 처리 세 가지 과정을 통해 수행한다." margin="10px"></top-textview>
+    <top-textview text="설정" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="다음과 같이 Top.App.create() 호출 시 route 속성 지정을 통해 라우팅 설정을 한다. 설정한 라우팅 정보는 앱 전역에서 사용된다." margin="0px 10px 0px 20px"></top-textview>
+    <top-textview text="route 속성은 key-value 형태의 object이며 key는 string 타입의 path이다. value는 object 타입으로 해당 path가 activate 될 때 실행할 함수명과 deactivate 될 때 실행할 함수명을 입력한다." margin="0px 10px 0px 20px"></top-textview>
+    <top-textview text="(이때 사용자 함수가 외부 파일에 정의되어 있을 경우 앱 실행 시점에서 함수를 찾지 못하기 때문에 함수명을 string 타입으로 입력한다.)" margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='Top.App.create({
+	route: {
+		"/:main": {
+			activate: "activateMain",
+			deactivate: "deactivateMain"
+		}
+	}
+	...
+});'></top-codeeditor>
+    <top-textview text="라우팅 설정 정보는 별도 json 파일에 저장하여 파일 경로로 입력이 가능하다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.App.create({
+	route: "routing.json"
+	...
+});'></top-codeeditor>
+    <top-textview text="실행" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="위에서 설정한 라우팅은 다음과 같이 API를 호출하거나 위젯의 이벤트로 등록함으로써 실행한다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='Top.App.routeTo("/about");'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='<top-button text="button1" on-click="/about"></top-button>'></top-codeeditor>
+    <top-textview text="처리" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="라우팅이 activate 되거나 deactivate 될 때 설정한 함수가 실행된다. 이때 parameter로 라우팅 route 정보를 전달 받을 수 있다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='function activateMain(route) {
+	console.log(route);	// Object {main: "about"}
+}'></top-codeeditor>
+    <top-textview text="Data" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="라우팅 시 사용자 정의 data 객체를 전달할 수 있다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='var data = {
+    name: "tmax"
+};
+Top.App.routeTo("/about", data);'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='function activateMain(route, data) {
+	console.log(route);	// Object {main: "about"}
+	console.log(data);	// Object {name: "tmax"}
+}'></top-codeeditor>
+    <top-textview text="Static path" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="라우팅 path는 고정값으로도 입력이 가능하다. 이 경우 라우팅 정보의 key 값은 '_default + 순서'가 된다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.App.create({
+	route: {
+		"/intro": {
+			activate: "activateMain",
+			deactivate: "deactivateMain"
+		}
+	}
+	...
+});'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='function activateMain(route) {
+	console.log(route);	// Object {_default0: "intro"}
+}'></top-codeeditor>
+    <top-textview text="Nested path" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="라우팅 path는 nested object 입력이 가능하다. 이 경우 실행될 함수를 nested 구조로 지정할 수 있다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='Top.App.create({
+	route: {
+		"/:main": {
+			activate: "activateMain",
+			deactivate: "deactivateMain"
+			route: {
+				"/:sub": {
+					activate: "activateSub"
+				}
+			}
+		}
+	}
+	...
+});'></top-codeeditor>
+    <top-textview text="실행 함수는 순차적으로 호출되며 이전에 호출된 함수에서 next를 전달받아 실행해야만 다음 하위 path의 함수를 실행한다." margin="0px 10px 0px 20px"></top-textview>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='Top.App.routeTo("/about/team");'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true"  text='function activateMain(route, data, next) {
+	console.log(route);	// Object {main: "intro"}
+	next();
+}'></top-codeeditor>
+    <top-codeeditor margin="10px 10px 10px 20px" theme="dracula" read-only="true" text='function activateSub(route) {
+	console.log(route);	// Object {sub: "team"}
+}'></top-codeeditor>
+</top-linearlayout>

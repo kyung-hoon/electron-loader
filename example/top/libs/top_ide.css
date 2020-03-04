@@ -1,0 +1,22 @@
+/*imageview*/
+
+top-imageview .top-imageview-root {
+    background-color: transparent;
+}
+
+top-imageview .top-imageview-root:hover {
+}
+
+
+/*layouts*/
+
+top-layout .top-layout-root,
+top-linearlayout .top-linearlayout-root,
+top-absolutelayout .top-absolutelayout-root,
+top-scrolllayout .top-scrolllayout-root,
+top-framelayout div,
+top-gridlayout .top-gridlayout-root,
+top-splitterlayout .top-splitterlayout-root,
+top-docklayout>.container {
+    background-color: transparent;
+}

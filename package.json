@@ -1,7 +1,7 @@
 {
-    "name": "",
+    "name": "my_app",
     "version": "1.0.0",
-    "description": "test",
+    "description": "my_app",
     "main": "index.js",
     "license": "MIT",
     "scripts": {

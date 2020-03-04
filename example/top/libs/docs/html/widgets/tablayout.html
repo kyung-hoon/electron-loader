@@ -1,0 +1,43 @@
+<script>
+var test_tabs1 = [
+    { id: "tabs1-1", text: "DB1", icon: "icon-circle", iconColor: "#e31b23" },
+    { id: "tabs1-2", text: "DB2", icon: "icon-expert", iconColor: "#e27725" },
+    { id: "tabs1-3", text: "DB3", icon: "icon-info", iconColor: "#edba00" },
+    { id: "tabs1-4", text: "DB4", icon: "icon-info", iconColor: "#73b944" },
+    { id: "tabs1-5", text: "DB5", icon: "icon-circle", iconColor: "#c3c3c3" },
+    { id: "tabs1-6", text: "DB6", icon: "icon-expert", iconColor: "#4085ee" },
+    { id: "tabs1-7", text: "DB7", icon: "icon-info", iconColor: "#e31b23" },
+    { id: "tabs1-8", text: "DB8", icon: "icon-info", iconColor: "#e27725" },
+    { id: "tabs1-9", text: "DB9", icon: "icon-circle", iconColor: "#edba00" },
+    { id: "tabs1-10", text: "DB10", icon: "icon-expert", iconColor: "#73b944" },
+    { id: "tabs1-11", text: "DB11", icon: "icon-info", iconColor: "#c3c3c3" },
+    { id: "tabs1-12", text: "DB12", icon: "icon-info", iconColor: "#4085ee" },
+];
+var test_tabs2 = [
+    {id: "tabs2-1", text: "General"},
+    {id: "tabs2-2", text: "Roles"},
+    {id: "tabs2-3", text: "System Privileges"},
+    {id: "tabs2-4", text: "Object Privileges"}
+];
+var test_tabs3 = [
+    { id: "tabs3-1", text: "Basic Info" },
+    { id: "tabs3-2", text: "TaskRelation" },
+    { id: "tabs3-3", text: "Attachment" },
+    { id: "tabs3-4", text: "History" }
+];
+
+var test_tabs4 = [
+    { id: "tabs4-1", text: "All Metric" },
+    { id: "tabs4-2", text: "CPU" },
+    { id: "tabs4-3", text: "Memory" },
+    { id: "tabs4-4", text: "Network" },
+    { id: "tabs4-5", text: "Disk" },
+];
+</script>
+<top-linearlayout margin="0px">
+    <top-tablayout class="tab_01" tabs="test_tabs1" selected="tabs1-2" paginate="true" layout-height="400px">
+        <top-tablayout class="tab_02" title="Tab Title" tabs="test_tabs2" selected="tabs2-1" margin="30px"></top-tablayout>
+        <top-tablayout class="tab_03" tabs="test_tabs3" selected="tabs3-1" margin="30px"></top-tablayout>
+        <top-tablayout class="tab_04" tabs="test_tabs4" selected="tabs4-1" margin="30px"></top-tablayout>
+   </top-tablayout>
+</top-linearlayout>

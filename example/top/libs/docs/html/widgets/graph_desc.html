@@ -1,0 +1,120 @@
+<top-linearlayout padding="20px 40px 20px 40px" orientation="vertical" border-width="0">
+    <top-linearlayout orientation="horizontal" border-width="0px" margin="0px 0px 20px 0px">
+        <top-textview text="Version: " text-size="16px" margin="0px"></top-textview>
+        <top-selectbox id="version_box" title="Version" data-model='{"nodes": "docsData.version_list"}' selected-index="5" margin="0px 20px 0px 0px"></top-selectbox>
+    </top-linearlayout>
+    <top-panel title="Overview" margin="0px 0px 20px 0px">
+        <top-textview text="Graph" text-size="20px"></top-textview><br>
+        <top-textview text="Node와 Edge들로 이루어진 그래프(Mathematical Graph 혹은 Topology)를 시각화하는 위젯" opacity="0.8" multi-line="true" text-size="14px"></top-textview>
+    </top-panel>
+    <top-panel title="Initialization Options">
+        <top-textview text="Properties" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.properties_graph"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Property}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Example}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Property" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Description" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Example" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        <top-textview text="Properties : elements" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.elements_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Attribute Name}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Type}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Attribute Name" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Type" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Description" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        <top-textview text="Properties : layout" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.layout_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Layout Name}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Example}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Layout Name" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Description" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Example" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        
+        <top-textview text="Properties : layout - common" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.layout_common_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Option Name}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Type}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Default}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Option Name" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Description" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Type" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Default" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        <top-textview text="Properties : style" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.style_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Option Name}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Example}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Option Name" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Description" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Example" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        <top-textview text="Properties : style - selector" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.style_selector_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Classification}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Selector Notation}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Classification" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Selector Notation" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Description" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+        
+        <top-textview text="Properties : style - style (<top-graph> specialized style 목록; css 문법과 같은 경우는 따로 기술하지 않음)" text-size="15px" margin="10px"></top-textview>
+        <top-tableview data-model='{"items": "graphData.style_style_options"}' virtual-scroll="false" column-resize="true" margin="0px 0px 20px 0px" layout-height="wrap_content">
+            <top-rowitem layout-width="match_parent" layout-height="35px" border-width="0px">
+                <top-columnitem border-width="0px" text="{Classification}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Property Name}"></top-columnitem>
+                <top-columnitem border-width="0px" text="{Description}"></top-columnitem>
+            </top-rowitem>
+            <top-tableheader layout-width="match_parent" layout-height="39px" border-width="0px">
+                <top-headercolumn layout-width="100px" visible="visible" border-width="0px" type="index"></top-headercolumn>
+                <top-headercolumn layout-width="300px" visible="visible" border-width="0px" text="Classification" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" border-width="0px" text="Property Name" type="normal"></top-headercolumn>
+                <top-headercolumn layout-width="300px" height="39" border-width="0px" text="Description" type="normal"></top-headercolumn>
+            </top-tableheader>
+        </top-tableview>
+    </top-panel>
+</top-linearlayout>
+

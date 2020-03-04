@@ -1,0 +1,51 @@
+/*!
+ * top-textview
+ */
+
+.top-textview-root {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-textview[disabled="true"] .top-textview-root {
+    cursor: not-allowed;
+    background-color: #e9e9e9;
+}
+
+.top-textview-root.multi-line {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-overflow: clip;
+}
+
+.top-textview-url {
+    padding: 0px 6px 0px 0px;
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+.top-textview-url.multi-line {
+    position: relative;
+    width: inherit;
+}
+
+.top-textview-aligner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.top-textview-aligner.middle {
+    vertical-align: middle;
+}
+
+.top-textview-aligner.bottom {
+    vertical-align: bottom;
+}

@@ -1,0 +1,67 @@
+/*!
+ * top-listview
+ */
+
+top-listview .top-listview-root {
+    display: inline-block;
+    border: 1px solid #f3f4f6;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-listview[disabled="true"] .top-listview-root,
+top-listview[disabled="true"] .top-listview-root * {
+    cursor: not-allowed !important;
+    background-color: #e9e9e9 !important;
+}
+
+top-listview .top-listview-header {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+top-listview .top-listview-container {
+    cursor: default;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+top-listview .top-listview-container.top-listview-virtual {
+    width: 100%;
+}
+
+top-listview .top-listview-container .top-listview-list {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    color: #494949;
+    border-bottom: 1px solid #f3f4f6;
+    background: #fff;
+}
+
+top-listview .top-listview-container .top-listview-list.last-child {
+    border-bottom: 0px;
+}
+
+top-listview .top-listview-container .top-listview-list:hover {
+    background-color: #dde8f7;
+}
+
+top-listview .top-listview-container .top-listview-list:active,
+top-listview .top-listview-container .top-listview-list:focus,
+top-listview .top-listview-container .top-listview-list.selected {
+    color: #fff;
+    background-color: #4085ee;
+}
+
+top-listview .top-listview-container .top-listview-list>top-linearlayout div {
+    background: transparent;
+}

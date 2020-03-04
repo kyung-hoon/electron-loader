@@ -1,0 +1,10 @@
+/*!
+ * top-common_chrome
+ */
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+}

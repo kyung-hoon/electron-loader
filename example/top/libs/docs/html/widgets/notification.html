@@ -1,0 +1,13 @@
+<script>
+function openNotification() {
+    Top.Dom.selectById("notification_test1").open();
+    Top.Dom.selectById("notification_test2").open();
+    Top.Dom.selectById("notification_test3").open();
+    Top.Dom.selectById("notification_test4").open();
+}
+</script>
+<top-notification id="notification_test1" type="success" title="Success" placement="tr" message="description" delay="1000" offset-x="10" offset-y="20"></top-notification>
+<top-notification id="notification_test2" type="info" title="Info" placement="tr" message="description" delay="1000" offset="10"></top-notification>
+<top-notification id="notification_test3" type="warning" title="Warning" placement="tr" message="description" delay="1000"></top-notification>
+<top-notification id="notification_test4" type="danger" title="Danger" placement="tr" message="description" delay="1000" ></top-notification>
+<top-button text="open" on-click="openNotification" margin="10px"></top-button>

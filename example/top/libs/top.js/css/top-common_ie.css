@@ -1,0 +1,16 @@
+/*!
+ * top-common_ie
+ */
+
+button,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+::-ms-clear {
+    display: none;
+}

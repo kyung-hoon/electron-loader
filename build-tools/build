@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+import os
+import shutil
+import json
+import sys
+
+###########################
+### 0. Read config file ###
+###########################
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+## read default config file ##
+with open('./build.config.json','r') as json_file:
+    config_json_data = json.load(json_file)
+print("load 'build.config.json' file")
+print(json.dumps(config_json_data, ensure_ascii=False, indent=4))
+
+## default parameter settings ##
+ELECTRON_PROJECT_ROOT = config_json_data["projectRoot"]
+TARGET_CODE_PATH = config_json_data["target"]
+PLATFORM = config_json_data["platform"]
+BUILDTYPE = config_json_data["buildType"]
+
+os.chdir(config_json_data["projectRoot"])
+
+## read specific config file ##
+if len(sys.argv) >= 2:
+  with open(sys.argv[1],'r') as json_file:
+    specific_config_json_data = json.load(json_file)  
+  print("load "+ sys.argv[1] +" file")
+  print(json.dumps(specific_config_json_data, ensure_ascii=False, indent=4))
+
+  ## specific parameter settings ##
+  # overriding
+  ELECTRON_PROJECT_ROOT = specific_config_json_data["projectRoot"]
+  TARGET_CODE_PATH = specific_config_json_data["target"]
+  PLATFORM = specific_config_json_data["platform"]
+  BUILDTYPE = specific_config_json_data["buildType"]
+  
+  # specific setting
+  APP_NAME = specific_config_json_data['app_name']
+  ELECTRON_MAIN_JS_PATH = os.getcwd() + "/" + specific_config_json_data['electron_main_js_name']
+  ELECTRON_ICON_PATH = TARGET_CODE_PATH + "/" + specific_config_json_data['electron_icon_name']
+else:
+  print("please add specific config json file (ex. 'build manifest.json')")
+  sys.exit()
+
+#############################
+### Init Electron Project ###
+#############################
+
+## make Electron Project template ##
+# prereq : nodejs, npm, yarn
+
+os.mkdir('./output')
+os.chdir('output')
+OUTPUT_PATH = os.getcwd() 
+
+with open('../package.json','r') as json_file:
+  package_json = json.load(json_file)
+
+# make 'package.json'
+package_json["name"] = APP_NAME
+package_json["build"]["win"]["icon"] = ELECTRON_ICON_PATH
+
+with open('package.json', 'w') as make_file:
+    json.dump(package_json, make_file, ensure_ascii=False, indent=4)
+
+# install electron
+os.system("yarn add electron --dev")
+
+# make 'index.js'
+shutil.copy(ELECTRON_MAIN_JS_PATH, OUTPUT_PATH)
+shutil.copy(ELECTRON_ICON_PATH, OUTPUT_PATH)
+# os.symlink(ELECTRON_ICON_PATH, OUTPUT_PATH)
+
+## Get user's code (html + '.js') ##
+
+for target in os.listdir(TARGET_CODE_PATH):
+  path = TARGET_CODE_PATH + "/" + target
+  if os.path.isdir(path):
+    shutil.copytree(path, OUTPUT_PATH + "/" + target)
+  else:
+    shutil.copyfile(path, OUTPUT_PATH + "/" + target)
+
+os.system("yarn dist")

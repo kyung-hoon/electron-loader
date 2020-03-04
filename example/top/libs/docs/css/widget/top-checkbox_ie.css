@@ -1,0 +1,13 @@
+/*!
+ * top-checkbox_ie
+ */
+top-checkbox .top-checkbox-text {
+    display: inline-block;
+    position: relative;
+    color: #444444;
+    font-size: 12px;
+    line-height: normal;
+    min-height: 13px;
+    box-sizing: border-box;
+    line-height: 17px;
+}

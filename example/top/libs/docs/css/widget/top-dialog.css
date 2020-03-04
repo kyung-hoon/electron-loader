@@ -1,0 +1,159 @@
+/*!
+ * top-dialog
+ */
+
+.top-dialog-root {
+    position: absolute;
+    outline: 0;
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    z-index: 101;
+    background-color: #ffffff;
+}
+
+.top-dialog-root .top-dialog-title-layout {
+    position: relative;
+    cursor: default;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.top-dialog-root .top-dialog-title-layout .top-dialog-close {
+    position: absolute;
+    vertical-align: middle;
+    outline: 0;
+}
+
+.top-dialog-root .top-dialog-title-layout .top-dialog-close:before {
+    content: "\e902";
+    font-family: "tmaxop";
+}
+
+.top-dialog-root .top-dialog-content {
+    position: relative;
+    border: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.top-dialog-root.popup_01 .top-dialog-content.fixed-width-dialog {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-dialog-root.popup_02 .top-dialog-content.fixed-width-dialog {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.top-dialog-root.popup_01 .top-dialog-content.fixed-height-dialog {
+    height: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.top-dialog-root.popup_02 .top-dialog-content.fixed-height-dialog {
+    height: calc(100% - 53px);
+    box-sizing: border-box;
+}
+
+.top-dialog-root.popup_01 .top-dialog-content.fixed-height-dialog.before-footer {
+    height: calc(100% - 93px);
+}
+
+.top-dialog-root.popup_02 .top-dialog-content.fixed-height-dialog.before-footer {
+    height: calc(100% - 106px);
+}
+
+.top-dialog-root.popup_01 .top-dialog-title-layout {
+    background-color: #5886bf;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+}
+
+.top-dialog-root.popup_01 .top-dialog-title-layout .top-dialog-title {
+    position: absolute;
+    line-height: 40px;
+    top: 0;
+}
+
+.top-dialog-root.popup_01 .top-dialog-title-layout .top-dialog-close {
+    right: 15px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    padding: 0;
+    line-height: 40px;
+    top: 0;
+    color: inherit;
+}
+
+.top-dialog-root.popup_01 .top-dialog-content {
+    padding: 20px;
+    padding-right: 25px;
+    color: #313131;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.top-dialog-root.popup_02 .top-dialog-title-layout {
+    background-color: #fff;
+    color: #444444;
+    font-size: 16px;
+    height: 53px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.top-dialog-root.popup_02 .top-dialog-title-layout .top-dialog-title {
+    position: absolute;
+    line-height: 53px;
+    top: 0;
+}
+
+.top-dialog-root.popup_02 .top-dialog-title-layout .top-dialog-close {
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+    padding: 0;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 10px;
+}
+
+.top-dialog-root.popup_02 .top-dialog-content {
+    border-top: 1px solid #c2c2c2;
+    margin: 0px 20px;
+    padding: 20px 0px;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.top-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #7d7d7d;
+    opacity: .5;
+    filter: alpha(opacity=50);
+    z-index: 100;
+}
+
+.top-dialog-footer {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: right;
+}

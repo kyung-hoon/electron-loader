@@ -1,0 +1,22 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Controller" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="Controller를 정의하고 view와의 바인딩을 통해 scope를 설정할 수 있다." margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="API" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="Top.Controller.create(id, controller)" text-size="16px" margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="해당 id를 가진 controller를 생성하고 controller 내의 init을 호출한다." margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="Example" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="다음 예제와 같이 controller를 생성하고 바인딩된 widget의 객체를 접근할 수 있다." margin="0px 10px 10px 20px"></top-textview>
+    <top-codeeditor theme="dracula" margin="10px 10px 10px 20px" read-only="true" text='Top.Controller.create(&#x27;layoutController&#x27;, {
+    init: function(widget) {
+        var children = widget.getChildren();         // 바인딩된 widget 객체 사용하여 전체 자식 객체를 얻음
+        var button1 = widget.selectById("button1");  // 바인딩된 widget 내에서만 탐색하여 해당 객체를 얻음
+    },
+
+    onBtnClick: function() {                         // 바인딩된 위젯 혹은 자식 위젯에서 사용할 이벤트 로직 정의
+        ...
+    }
+});'></top-codeeditor>
+    <top-codeeditor theme="dracula" mode="html" margin="10px 10px 20px 20px" read-only="true" text='<top-linearlayout controller="layoutController">
+    <top-button id="button1" on-click="onBtnClick"></top-button>
+</top-linearlayout>'></top-codeeditor>
+</top-linearlayout>

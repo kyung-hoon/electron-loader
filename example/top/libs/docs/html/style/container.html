@@ -1,0 +1,60 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="TableView" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-tableview id="sample_class_tableview" class="white" layout-width="500px" items="sample_items" margin="30px" paginate="true" page-length="5" checkable="true" scroll-height="100px" layout-vertical-alignment="middle"></top-tableview>
+        <top-tableview id="class_tableview" checkable="true" checkable-head="false" on-check="checkClassName" layout-width="300px" items="class_tableview" margin="30px" layout-vertical-alignment="middle"></top-tableview>
+    </top-linearlayout>
+    <top-textview text="ListView" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-listview id="sample_class_listview" layout-width="300px" items="sample_items" item-binding="col1:text;name,col2:number;age,col3:text;age" margin="30px" layout-vertical-alignment="middle">
+            <top-linearlayout border-width="0px">
+                <top-textview class="col1" margin="5px"></top-textview>
+                <top-textview text="age: " margin="5px 0px"></top-textview>
+                <top-slider class="col2" max="100" margin="5px"></top-slider>
+                <top-textview class="col3" margin="5px"></top-textview>
+            </top-linearlayout>
+        </top-listview>
+        <top-tableview id="class_listview" checkable="true" checkable-head="false" on-check="checkClassName" layout-width="300px" items="class_listview" margin="30px" layout-vertical-alignment="middle"></top-tableview>
+    </top-linearlayout>
+    <top-textview text="SelectBox" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-selectbox id="sample_class_selectbox" title="Job" layout-width="300px" margin="30px" layout-vertical-alignment="middle">
+            <top-widgetitem text="Researcher"></top-widgetitem>
+            <top-widgetitem text="Lawyer"></top-widgetitem>
+            <top-widgetitem text="Doctor"></top-widgetitem>
+        </top-selectbox>
+        <top-tableview id="class_selectbox" checkable="true" checkable-head="false" on-check="checkClassName" layout-width="300px" items="class_selectbox" margin="30px" layout-vertical-alignment="middle"></top-tableview>
+    </top-linearlayout>
+    <top-textview text="TreeView" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-treeview id="sample_class_treeview" margin="30px" layout-vertical-alignment="middle">
+            <top-widgetitem text="node-1" icon="icon-expert">
+                <top-widgetitem text="node-11"></top-widgetitem>
+                <top-widgetitem text="node-12">
+                    <top-widgetitem text="node-122"></top-widgetitem>
+                </top-widgetitem>
+                <top-widgetitem text="node-13"></top-widgetitem>
+            </top-widgetitem>
+            <top-widgetitem text="node-2" icon="icon-expert"></top-widgetitem>
+            <top-widgetitem text="node-3" image="res/graph.png"></top-widgetitem>
+        </top-treeview>
+        <top-tableview id="class_treeview" checkable="true" checkable-head="false" on-check="checkClassName" layout-width="300px" items="class_treeview" margin="30px" layout-vertical-alignment="middle"></top-tableview>
+    </top-linearlayout>
+    <top-textview text="Panel" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-panel id="sample_class_panel" title="Title" margin="30px" layout-width="300px" layout-vertical-alignment="middle">
+            <top-textview text="Hello, panel!" margin="20px"></top-textview>
+        </top-panel>
+        <top-tableview id="class_panel" checkable="true" checkable-head="false" on-check="checkClassName" layout-width="300px" items="class_panel" margin="30px" layout-vertical-alignment="middle"></top-tableview>
+    </top-linearlayout>
+    <top-textview text="Dialog" text-size="30px" text-style="bold" margin="10px 10px 10px 30px"></top-textview>
+    <top-linearlayout></top-linearlayout>
+    <top-linearlayout margin="30px" orientation="horizontal" horizontal-alignment="center">
+        <top-imageview margin="30px" layout-width="600px" src="res/dialogClassName.png"></top-imageview>
+    </top-linearlayout>
+</top-linearlayout>

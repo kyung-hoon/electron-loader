@@ -1,0 +1,69 @@
+/*!
+ * top-docklayout
+ */
+top-docklayout .top-docklayout-root {
+    display: inline-block;
+    position: relative;
+    font-size: 0px;
+}
+
+top-docklayout>.container {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    line-height: normal;
+}
+
+top-docklayout>.container>div {
+    padding: 15px;
+}
+
+top-docklayout div {
+    border: 1px solid #d3d3e3;
+}
+
+top-docklayout .north {
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+}
+
+top-docklayout .south {
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+top-docklayout .east {
+    margin: 0;
+    padding: 1em;
+    height: 100%;
+    float: left;
+    margin-right: 1.1em;
+}
+
+top-docklayout .west {
+    margin: 0;
+    padding: 1em;
+    height: 100%;
+    float: right;
+    margin-left: 1.1em;
+}
+
+top-docklayout .center {
+    margin: 0;
+    padding: 1em;
+    padding-bottom: 0em;
+}
+
+top-docklayout .center:after {
+    content: ' ';
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}

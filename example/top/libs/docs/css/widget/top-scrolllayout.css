@@ -1,0 +1,15 @@
+/*!
+ * top-scrolllayout
+ */
+
+top-scrolllayout>.top-scrolllayout-root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    line-height: normal;
+    position: relative;
+    font-size: 0px;
+}

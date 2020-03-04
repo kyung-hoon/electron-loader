@@ -1,0 +1,196 @@
+/*!
+ * top-textfield
+ */
+
+top-textfield .top-textfield-root {
+    display: inline-block;
+    color: #444444;
+    font-size: 14px;
+    position: relative;
+}
+
+top-textfield .top-textfield-root>form {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+top-textfield .top-textfield-root .top-textfield-text {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    background-image: none;
+    border-radius: 2px;
+    color: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    background-color: #ffffff;
+    border: 1px solid #d3dbdf;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:focus {
+    border-color: #3e75c7;
+    color: #1c458d;
+    -webkit-box-shadow: rgba(120, 182, 241, 0.18) 0 0 10px;
+    box-shadow: rgba(120, 182, 241, 0.18) 0 0 10px;
+}
+
+top-textfield.error .top-textfield-root .top-textfield-text {
+    border-color: #e25750;
+    color: #e31b23;
+}
+
+top-textfield.error .top-textfield-root .top-textfield-text:focus {
+    border-color: #e25750;
+    color: #e31b23;
+    box-shadow: none;
+}
+
+top-textfield .top-textfield-root .top-textfield-text[disabled],
+top-textfield .top-textfield-root .top-textfield-text[readonly],
+fieldset[disabled] top-textfield .top-textfield-root .top-textfield-text {
+    background-color: #e9e9e9;
+    border-color: #cccccc;
+    color: #aaaaaa;
+    opacity: 1;
+}
+
+top-textfield .top-textfield-root .top-textfield-text[disabled],
+fieldset[disabled] top-textfield .top-textfield-root .top-textfield-text {
+    cursor: not-allowed;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:focus::-webkit-input-placeholder {
+    text-indent: -999px;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:focus::-moz-placeholder {
+    text-indent: -999px;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:focus:-ms-input-placeholder {
+    text-indent: -999px;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:focus:-moz-placeholder {
+    text-indent: -999px;
+}
+
+top-textfield .top-textfield-root .top-textfield-text:not(:valid)~.top-textfield-clear {
+    display: none;
+}
+
+top-textfield .top-textfield-root .top-textfield-clear {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+top-textfield .top-textfield-root .top-textfield-clear:before {
+    content: "\e902";
+    color: #c1c6ce;
+    font-family: "tmaxop";
+}
+
+top-textfield .top-textfield-icon {
+    display: inline;
+    position: relative;
+    right: 30px;
+}
+
+top-textfield.in_textfield .top-textfield-root {
+    height: 30px;
+}
+
+top-textfield.in_textfield .top-textfield-text {
+    height: 100%;
+}
+
+top-textfield.in_textfield .top-textfield-title {
+    display: inline-block;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    border-right: 1px solid #d3dbdf;
+    z-index: 1;
+    height: 100%;
+    height: calc(100% - 8px);
+    margin: 4px 0px;
+}
+
+top-textfield.in_textfield .top-textfield-title[disabled] {
+    border-right-color: #cccccc;
+}
+
+top-textfield.in_textfield .top-textfield-icon,
+top-textfield.in_textfield .top-textfield-clear {
+    top: 0;
+}
+
+top-textfield.in_textfield.error .top-textfield-root .top-textfield-title {
+    border-right-color: #e25750;
+}
+
+top-textfield.in_textfield.error .top-textfield-root .top-textfield-alert {
+    display: inline;
+    position: absolute;
+    right: 0px;
+    padding-right: 10px;
+    line-height: 30px;
+}
+
+top-textfield.in_textfield.error .top-textfield-root .top-textfield-alert:before {
+    color: #e31b23;
+    content: "\e92f";
+    font-family: "tmaxop";
+}
+
+top-textfield.out_textfield .top-textfield-text {
+    height: 30px;
+}
+
+top-textfield.out_textfield .top-textfield-title {
+    display: inline-block;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+top-textfield.out_textfield .top-textfield-icon,
+top-textfield.out_textfield .top-textfield-clear {
+    bottom: 0;
+}
+
+top-textfield.out_textfield.error .top-textfield-root .top-textfield-alert {
+    display: inline;
+    position: absolute;
+    right: 0px;
+    padding-right: 10px;
+    line-height: 30px;
+}
+
+top-textfield.out_textfield.error .top-textfield-root .top-textfield-alert:before {
+    color: #e31b23;
+    content: "\e92f";
+    font-family: "tmaxop";
+}
+
+.top-textfield-timer {
+    display: inline;
+    position: absolute;
+    right: 10px;
+    color: #ff6600;
+    font-size: 14px;
+}

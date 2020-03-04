@@ -1,0 +1,390 @@
+/*!
+ * top-treeview
+ */
+top-treeview .top-treeview-root {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+top-treeview .top-treeview-search {
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    height: 30px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #d3dbdf;
+    border-radius: 2px;
+    color: inherit;
+    font-size: 14px;
+}
+
+top-treeview .top-treeview-search:focus {
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #66afe9;
+    color: #1c458d;
+}
+
+top-treeview .top-treeview-header {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+top-treeview .top-treeview-container {
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: 400;
+    color: #494949;
+    margin: 0;
+    padding: 0px;
+}
+
+top-treeview .top-treeview-container * {
+    list-style: none;
+    margin: 0;
+    outline: 0;
+}
+
+top-treeview .top-treeview-container *,
+top-treeview .top-treeview-container *:hover {
+    text-decoration: none !important;
+}
+
+top-treeview .top-treeview-container input.top-treeview-button {
+    display: none !important;
+}
+
+top-treeview .top-treeview-container input.top-treeview-button+i:before {
+    content: "\e98f";
+    font-size: 9px;
+    color: #d5d5d5;
+    font-style: normal;
+    cursor: pointer;
+    font-family: "tmaxop";
+}
+
+top-treeview .top-treeview-container input.top-treeview-button:checked+i:before {
+    content: "\e997";
+    font-family: "tmaxop";
+}
+
+top-treeview .top-treeview-container ul {
+    padding-left: 15px;
+}
+
+top-treeview .top-treeview-container.auto-width label.top-treeview-item {
+    box-sizing: border-box;
+    width: calc(100% - 9px);
+}
+
+top-treeview .top-treeview-container.auto-width a.top-treeview-item {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+top-treeview .top-treeview-container.auto-width .top-treeview-check+label+label.top-treeview-item {
+    width: calc(100% - 29px);
+}
+
+top-treeview .top-treeview-container.auto-width .top-treeview-check+label+a.top-treeview-item {
+    width: calc(100% - 20px);
+}
+
+top-treeview .top-treeview-container .top-treeview-list {
+    position: relative;
+    line-height: 25px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.parent>i {
+    vertical-align: top;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.parent .top-treeview-icon:before {
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.parent .top-treeview-image {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.child {
+    padding-left: 16px;
+    padding-top: 2px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.child .top-treeview-icon:before {
+    font-size: 13px;
+    margin-right: 7px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list.child .top-treeview-image {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 7px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check {
+    display: none;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check:checked+label::before {
+    outline: none;
+    font-family: "tmaxop";
+    content: "\e924";
+    color: #6b9ad4;
+    border: 0px;
+    font-size: 15px;
+    top: -4px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check:disabled+label::before {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check:disabled:checked+label::before {
+    background: none;
+    color: #aaaaaa;
+}
+
+top-treeview[disabled="true"] .top-treeview-root,
+top-treeview[disabled="true"] .top-treeview-root * {
+    cursor: not-allowed !important;
+    background-color: #e9e9e9 !important;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check+label::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 2px;
+    left: 0;
+    border: 1px solid #9aa8b1;
+    border-radius: 2px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-check+label {
+    position: relative;
+    margin-left: 5px;
+    padding: 0px 7px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item:hover {
+    background-color: #dde8f7;
+    border-radius: 2px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item:active,
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item.selected {
+    background-color: #4085ee;
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item:active .top-treeview-icon:before,
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item.selected .top-treeview-icon:before {
+    color: #ffffff;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item.over {
+    background-color: rgba(85, 142, 213, 0.7);
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item.over .top-treeview-icon:before {
+    color: #ffffff;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item.highlight {
+    font-weight: 600;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn {
+    float: right;
+    z-index: 99;
+    margin: 5px 0 0 8px;
+    border: 1px solid #88b0e2;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    position: relative;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn:before {
+    content: "\e911";
+    font-family: "tmaxop";
+    font-size: 8px;
+    color: #88b0e2;
+    position: absolute;
+    line-height: 14px;
+    padding: 0px 3px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn:hover {
+    border-color: #4085ee;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn:hover:before {
+    color: #4085ee;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn.selected {
+    border-color: #0175bc;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn.selected:before {
+    color: #0175bc;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn .top-treeview-edit_nav {
+    display: none;
+    padding: 0;
+    border: 1px solid #0175bc;
+    color: #666666;
+    position: fixed;
+    min-width: 79px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn .top-treeview-edit_nav>* {
+    line-height: 23px;
+    background-color: #fff;
+    padding: 0px 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn .top-treeview-edit_nav>*:hover {
+    color: #333;
+    background-color: #eaf9ff;
+    font-weight: 500;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_btn .top-treeview-edit_nav>*:active {
+    color: #fff;
+    background-color: #1576e7;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_input {
+    background-color: #ffffff;
+    border: 1px solid #d3dbdf;
+    border-radius: 2px;
+    color: #333;
+    padding: 0px 8px;
+    line-height: 23px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list .top-treeview-item .top-treeview-edit_input:focus {
+    border: 1px solid #66afe9;
+    color: #1c458d;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0).parent {
+    padding-left: 6px;
+    padding-top: 3px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0):not(.virtual):before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: -8px;
+    left: -11px;
+    right: 0;
+    width: 0px;
+    border-left: 1px solid #f1f1f1;
+    padding-top: 9px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0):last-child:before {
+    height: 17px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0) .top-treeview-item {
+    z-index: 1;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0):not(.virtual) .top-treeview-item:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -11px;
+    right: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0) label.top-treeview-item:after {
+    width: 17px;
+}
+
+top-treeview .top-treeview-container .top-treeview-list:not(.level0) a.top-treeview-item:after {
+    width: 24px;
+}
+
+top-treeview .top-treeview-dropline {
+    display: none;
+    position: absolute;
+    background-color: #4085ee;
+    height: 2px;
+    z-index: 1;
+}
+
+top-treeview .top-treeview-icon:before {
+    color: #88b0e2;
+}
+
+.top-treeview-draggedNode {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: rgba(85, 142, 213, 0.45);
+    border-radius: 2px;
+}
+
+.top-treeview-draggedNode .top-treeview-edit_btn {
+    display: none;
+}
+
+.top-treeview-draggedNode .top-treeview-icon {
+    padding: 0px 7px 0px 9px;
+}
+
+.top-treeview-draggedNode .top-treeview-icon:before {
+    color: #ffffff;
+}
+
+.top-treeview-draggedNode .top-treeview-image {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 7px;
+}

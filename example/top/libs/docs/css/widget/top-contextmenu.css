@@ -1,0 +1,97 @@
+/*!
+ * top-contextmenu
+ */
+
+top-contextmenu .top-contextmenu-root {
+    display: inline-block;
+    position: fixed;
+    z-index: 102;
+}
+
+top-contextmenu .top-contextmenu-container {
+    cursor: pointer;
+}
+
+top-contextmenu .top-contextmenu-container a:focus {
+    outline: none;
+    border: 0;
+}
+
+top-contextmenu .top-contextmenu-container a:-webkit-any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+top-contextmenu .top-contextmenu-container ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #0175bc;
+    position: absolute;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item {
+    min-width: 79px;
+    padding: 0px 8px;
+    height: 23px;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    background-color: #fff;
+    position: relative;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item:active,
+top-contextmenu .top-contextmenu-container .top-contextmenu_item.selected {
+    background-color: #1576e7;
+    color: #fff;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item:hover:not(.selected) {
+    background-color: #eaf9ff;
+    color: #333;
+    font-weight: 500;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item.divider:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #d8d8d8;
+    width: calc(100% - 6px);
+    top: 100%;
+    left: 3px;
+    z-index: 1;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item.top-contextmenu_parent {
+    padding: 0px 24px 0px 8px;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item .top-contextmenu_item_inner {
+    line-height: 23px;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item .top-contextmenu_item_inner>* {
+    vertical-align: middle;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item>.top-contextmenu_arrow {
+    font-size: 7px;
+    right: 8px;
+    position: absolute;
+    line-height: 23px;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item .top-contextmenu_icon {
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+top-contextmenu .top-contextmenu-container .top-contextmenu_item .top-contextmenu_image {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}

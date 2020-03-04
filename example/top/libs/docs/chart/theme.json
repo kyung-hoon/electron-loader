@@ -1,0 +1,13 @@
+{
+    "colorSet1": ["#6574c4", "#4dabf5", "#33c1ce", "#36ccb5", "#879e95", "#8fa3b5", "#4599c1", "#8561c5", "#c340d3", "#dc5887", "#f787a7", "#ff9d96", "#ffd0a3", "#d1b6ae", "#c3c380"],
+    "colorSet2": ["#6574c4", "#8fa3b5", "#ffd0a3", "#f787a7", "#ff9d96", "#d1b6ae", "#c3c380", "#c340d3", "#4dabf5", "#dc5887", "#33c1ce", "#8561c5", "#36ccb5", "#879e95", "#4599c1"],
+    "statusColor":
+    {
+        "fatal": ["#ca3b3b", "#de5656", "#e57878", "#eeaaaa", "#e8e8e8"],
+        "critical": ["#eb752f", "#fa965a", "#fbab7b", "#fccaac", "#e8e8e8"],
+        "warning": ["#efa40f", "#fac458", "#fbd079", "#fce1ab", "#e8e8e8"],
+        "normal": ["#65cd37", "#8bd46a", "#a2dd88", "#c5e9b4", "#e8e8e8"],
+        "informative": ["#57a2e6", "#72b8f8", "#8ec6f9", "#b8dbfb", "#e8e8e8"],
+        "terminate": ["#b1afaf", "#c4c4c4", "#d0d0d0", "#e1e1e1", "#e8e8e8"]
+    }
+}

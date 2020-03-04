@@ -1,0 +1,14 @@
+/*!
+ * top-customwidget
+ */
+.top-customwidget-root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    line-height: normal;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}

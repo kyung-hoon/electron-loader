@@ -1,0 +1,26 @@
+<script>
+var testCardList = [{
+    id: "card01",
+    name: "card 01",
+    html: "html/sample/cardSample.html",
+    title: "Card #1"
+}, {
+    id: "card02",
+    name: "card 02",
+    html: '<top-linearlayout layout-width="100%" layout-height="100%" orientation="vertical"><top-textview text="Card #2" text-size="15px"></top-textview><top-textview text="Card Layout Text Button Widget"></top-textview><top-button text="Card Layout Test Button Click Widget"></top-button></top-linearlayout>'
+}, {
+    id: "card03",
+    name: "card 03",
+    html: "html/sample/chartSample.html",
+    title: "Card #3"
+}, {
+    id: "card04",
+    name: "card 04",
+    html: '<top-imageview src="res/top.png" layout-width="100%" layout-height="100%" margin="5px"></top-imageview>'
+}, {
+    id: "card05",
+    name: "card 05",
+    html: '<top-linearlayout layout-width="100%" layout-height="100%"><top-chart type="column" series="line_data" option="line_option"></top-chart></top-linearlayout>'
+}];
+</script>
+<top-dashboard layout-width="100%" layout-height="600px" header-title="Dashboard Title" card-list="testCardList"></top-dashboard><top-dashboard layout-width="100%" layout-height="600px" header-title="Dashboard Title" card-list="testCardList" edit-type="top-align"></top-dashboard>

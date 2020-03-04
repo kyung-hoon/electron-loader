@@ -1,0 +1,140 @@
+/*!
+ * top-accordionlayout
+ */
+
+top-accordionlayout .top-accordionlayout-root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    border: 1px solid #d3dbdf;
+    position: relative;
+    font-size: 0px;
+}
+
+top-accordionlayout .top-accordionlayout-container {
+    border-top: 1px solid #d3dbdf;
+}
+
+top-accordionlayout top-accordiontab:first-child .top-accordionlayout-container {
+    border-top-width: 0;
+}
+
+top-accordionlayout .top-accordionlayout-container .top-accordionlayout-title {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #d3dbdf;
+    background-color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+top-accordionlayout .top-accordionlayout-container .top-accordionlayout-content {
+    padding: 15px 15px;
+    text-align: left;
+    overflow: hidden;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title {
+    padding: 7px 15px;
+    font-size: 14px;
+    color: #494949;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title .top-accordionlayout-icon {
+    color: #9aa5b4;
+    float: right;
+    font-style: normal;
+    font-family: "tmaxop";
+    font-size: 10px;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title .top-accordionlayout-icon:before {
+    font-family: "tmaxop";
+    content: "\e911";
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title:hover {
+    background-color: #dde8f7;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title:hover .top-accordionlayout-icon {
+    color: #4085ee;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title.active {
+    background-color: #4085ee;
+    color: #fff;
+    font-weight: 600;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title.active .top-accordionlayout-icon {
+    color: #fff;
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-title.active .top-accordionlayout-icon:before {
+    font-family: "tmaxop";
+    content: "\e914";
+}
+
+top-accordionlayout.accordion_01 .top-accordionlayout-content {
+    color: #494949;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: #fafafa;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title {
+    padding: 9px 11px;
+    padding-left: 17px;
+    font-size: 13px;
+    color: #749feb;
+    font-weight: 400;
+    position: relative;
+    line-height: 21px;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 1px);
+    width: 6px;
+    background-color: #749feb;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title .top-accordionlayout-icon {
+    float: left;
+    font-style: normal;
+    font-family: "tmaxop";
+    font-size: 10px;
+    padding-right: 6px;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title .top-accordionlayout-icon:before {
+    font-family: "tmaxop";
+    content: "\e959";
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title.active {
+    color: #2165b4;
+    font-weight: 500;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title.active:before {
+    background-color: #2165b4;
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-title.active .top-accordionlayout-icon:before {
+    font-family: "tmaxop";
+    content: "\e958";
+}
+
+top-accordionlayout.accordion_02 .top-accordionlayout-content {
+    background-color: #f6fafc;
+}

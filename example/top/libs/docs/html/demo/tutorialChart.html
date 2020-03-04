@@ -1,0 +1,42 @@
+<top-linearlayout orientation="vertical" horizontal-alignment="center" border-width="0px">
+    <top-chart id="tutoChart" type="column" series="line_data" option="line_option" margin="20px" layout-width="600px" layout-height="400px"></top-chart>
+    <top-textarea id="tutorialTextArea" text='<Chart : Chart의 기본 사용법>
+
+<html>
+    <top-linearlayout orientation="vertical" horizontal-alignment="center" border-width="0px">
+    <top-chart id="tutoChart" type="column" series="line_data" option="line_option" margin="20px" 
+    layout-width="600px" layout-height="400px"></top-chart>
+   </top-linearlayout>
+</html>
+
+<script>
+	var line_data = [
+	    { name: &#x27;Male&#x27;, data: [30, 20, 10, 20, 30, 40, 3] },
+	    { name: &#x27;Female&#x27;, data: [40, 10, 20, 33, 36, 5, 22] }
+	];
+	var line_option = {
+	    title: {
+	        text: &#x27;TOP Customer&#x27;,
+	        margin: {
+	            bottom: 0
+	        },
+	        align: &#x27;center&#x27;,
+
+	    },
+	    colors: [&#x27;#168F56&#x27;, &#x27;#FF5C7D&#x27;],
+	    xAxis: {
+
+	        categories: [&#x27;Mon&#x27;, &#x27;Tue&#x27;, &#x27;Wed&#x27;, &#x27;Thur&#x27;, &#x27;Fri&#x27;, &#x27;Sat&#x27;, &#x27;Sun&#x27;]
+	    }
+	};
+</script>
+
+<Chart의 주요 property>  
+
+series : Chart에 들어갈 데이터 바인딩.
+
+type : 차트의 타입 설정.
+
+*차트에 관한 자세한 설명은 widgets/chart 란을 참조.
+' margin="40px 10px" layout-width="850px" rows="39"></top-textarea>
+</top-linearlayout>

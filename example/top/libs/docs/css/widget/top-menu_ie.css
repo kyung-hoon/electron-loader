@@ -1,0 +1,11 @@
+/*!
+ * top-menu_ie
+ */
+
+.Menu_type_header .top-menu_nav {
+    display: -ms-flexbox;
+}
+
+.Menu_type_header.placement_horizontal .depth1>ul {
+    display: -ms-flexbox;
+}

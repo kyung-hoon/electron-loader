@@ -1,0 +1,73 @@
+<script>
+var simple_graph_options = Top.Data.create({
+    styles: [{
+        selector: 'node',
+        style: {
+            'width': '40px',
+            'height': '40px',
+            //'shape':'hexagon',
+            'background-color': 'gray',
+            'border-color': 'black',
+            'label': 'data(label)',
+            'text-valign': 'bottom',
+            'text-halign': 'center',
+            'font-size': '12px',
+            'font-color': '#3c454a',
+            'font-weight': 600
+        }
+    }, {
+        selector: 'edge',
+        style: {
+            'width': 1,
+            'line-color': '#717578',
+            'curve-style': 'unbundled-bezier',
+            'control-point-distances': 120,
+            'control-point-weights': 0.1,
+            'opacity': 0.5
+        }
+    }, {
+        selector: ':selected',
+        style: {
+            'background-color': 'green',
+            'line-color': 'black',
+            'target-arrow-color': 'black',
+            'source-arrow-color': 'black',
+            'opacity': 1,
+        }
+    }, {
+        selector: '.faded',
+        style: {
+            'opacity': 0.25,
+            'text-opacity': 0
+        }
+    }],
+    elements: [{
+        group: 'nodes',
+        data: {
+            id: 'n0',
+            label: 'node #1'
+        }
+    }, {
+        group: 'nodes',
+        data: {
+            id: 'n1',
+            label: 'node #2'
+        }
+    }, {
+        group: 'edges',
+        data: {
+            id: 'e0',
+            source: 'n0',
+            target: 'n1'
+        }
+    }],
+    layout: {
+        name: 'cose'
+    }
+});
+</script>
+<top-linearlayout border-width="0px" layout-height="100%">
+    <top-layout border-width="0px" >
+        <top-graph id="topology1" layout="simple_graph_options.layout" elements="simple_graph_options.elements" styles="simple_graph_options.style"></top-graph>
+    </top-layout>
+</top-linearlayout>

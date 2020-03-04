@@ -1,0 +1,249 @@
+/*!
+ * top-colorpicker
+ */
+
+top-colorpicker .top-colorpicker-root {
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+}
+
+top-colorpicker .top-colorpicker-button,
+top-colorpicker .top-colorpicker-ok,
+top-colorpicker .top-colorpicker-cancel {
+    font-weight: 600;
+    min-height: 35px;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    color: #fff;
+    white-space: nowrap;
+    border-radius: 2px;
+    border: 0px;
+    padding: 8px 13px 9px 15px;
+    font-size: 12px;
+    min-width: 65px;
+    background-color: #4085ee;
+}
+
+top-colorpicker .top-colorpicker-button:hover,
+top-colorpicker .top-colorpicker-ok:hover,
+top-colorpicker .top-colorpicker-cancel:hover {
+    background-color: #3e75c7;
+}
+
+top-colorpicker .top-colorpicker-button:active,
+top-colorpicker .top-colorpicker-ok:active,
+top-colorpicker .top-colorpicker-cancel:active {
+    background-color: #275cb9;
+}
+
+top-colorpicker .top-colorpicker-button.disabled,
+top-colorpicker .top-colorpicker-ok.disabled,
+top-colorpicker .top-colorpicker-cancel.disabled,
+top-colorpicker .top-colorpicker-button[disabled],
+top-colorpicker .top-colorpicker-ok[disabled],
+top-colorpicker .top-colorpicker-cancel[disabled],
+fieldset[disabled] top-colorpicker .top-colorpicker-button,
+fieldset[disabled] top-colorpicker .top-colorpicker-ok,
+fieldset[disabled] top-colorpicker .top-colorpicker-cancel {
+    cursor: not-allowed;
+    background-color: #aaaaaa;
+}
+
+top-colorpicker span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000000;
+}
+
+top-colorpicker .top-colorpicker-button {
+    min-height: 10px;
+    min-width: 10px;
+    padding: 5px 5px 5px 5px;
+    display: inline-block;
+    border: 5px solid #aaaaaa;
+    background-color: #fff;
+    position: relative;
+}
+
+top-colorpicker .top-colorpicker-ok,
+top-colorpicker .top-colorpicker-cancel {
+    width: 40px;
+    height: 20px;
+    margin: 20px;
+    float: right;
+    background-color: #666;
+}
+
+top-colorpicker .top-colorpicker-container-trans {
+    float: left;
+    height: 75px;
+    margin-left: 43px;
+    display: inline;
+}
+
+top-colorpicker .top-colorpicker-a {
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #d3dbdf;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin-bottom: 30px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    background-image: none;
+    border-radius: 2px;
+}
+
+top-colorpicker .top-colorpicker-t {
+    vertical-align: middle;
+    padding-left: 14px;
+    display: inline-block;
+    height: 30px;
+}
+
+top-colorpicker .top-colorpicker-transparency {
+    width: 33px;
+    height: 33px;
+    margin-top: 20px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 5px;
+    /*float: left;*/
+    background-color: transparent;
+    background-size: 20px 20px;
+    background-position: -3px -3px, 7px 7px;
+    background-image:
+        linear-gradient(45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray) ,
+        linear-gradient(45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray) ;
+}
+
+top-colorpicker .top-colorpicker-span {
+    font-weight: 500;
+    font-size: 14px;
+    width: 20px;
+}
+
+top-colorpicker .top-colorpicker-popup {
+    display: none;
+    position: fixed;
+    background-color: #C8C8C8;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    box-shadow: 5px 5px 5px 0px lightgray;
+    margin: 20px;
+    width: 640px;
+    height: 450px;
+    border-radius: 5px;
+    line-height: 0px;
+}
+
+top-colorpicker .top-colorpicker-container {
+    display: inline;
+    width: 100%;
+}
+
+top-colorpicker .top-colorpicker-canvas {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+top-colorpicker .top-colorpicker-r,
+top-colorpicker .top-colorpicker-g,
+top-colorpicker .top-colorpicker-b,
+top-colorpicker .top-colorpicker-h,
+top-colorpicker .top-colorpicker-s,
+top-colorpicker .top-colorpicker-v,
+top-colorpicker .top-colorpicker-hex {
+    background-color: #ffffff;
+    border: 1px solid #d3dbdf;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    background-image: none;
+    border-radius: 2px;
+}
+
+top-colorpicker .top-colorpicker-r:focus,
+top-colorpicker .top-colorpicker-g:focus,
+top-colorpicker .top-colorpicker-b:focus,
+top-colorpicker .top-colorpicker-h:focus,
+top-colorpicker .top-colorpicker-s:focus,
+top-colorpicker .top-colorpicker-v:focus,
+top-colorpicker .top-colorpicker-hex:focus {
+    border: 1px solid #66afe9;
+    -webkit-box-shadow: rgba(120, 182, 241, 0.18) 0 0 10px;
+    box-shadow: rgba(120, 182, 241, 0.18) 0 0 10px;
+}
+
+top-colorpicker .top-colorpicker-r:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-g:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-b:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-h:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-s:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-v:focus::-webkit-input-placeholder,
+top-colorpicker .top-colorpicker-hex:focus::-webkit-input-placeholder {
+    text-indent: -999px;
+}
+
+top-colorpicker .top-colorpicker-r:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-g:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-b:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-h:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-s:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-v:focus::-moz-placeholder,
+top-colorpicker .top-colorpicker-hex:focus::-moz-placeholder {
+    text-indent: -999px;
+}
+
+top-colorpicker .top-colorpicker-r:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-g:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-b:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-h:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-s:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-v:focus:-ms-input-placeholder,
+top-colorpicker .top-colorpicker-hex:focus:-ms-input-placeholder {
+    text-indent: -999px;
+}
+
+top-colorpicker .top-colorpicker-r:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-g:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-b:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-h:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-s:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-v:focus:-moz-placeholder,
+top-colorpicker .top-colorpicker-hex:focus:-moz-placeholder {
+    text-indent: -999px;
+}
+
+top-colorpicker .top-colorpicker-hex {
+    width: 80px;
+}
+
+top-colorpicker .top-colorpicker-preview {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+top-colorpicker .top-colorpicker-aim {
+    width: 20px;
+    height: 20px;
+    font-style: normal;
+    position: absolute;
+    z-index: 100;
+    display: none;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0 1px #000,
+        inset 0 0 0 2px #fff;
+}

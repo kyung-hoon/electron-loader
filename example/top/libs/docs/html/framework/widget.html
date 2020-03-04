@@ -1,0 +1,142 @@
+<top-linearlayout orientation="vertical">
+    <top-textview text="Widget" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="View는 위젯들로 구성되며 기본 제공 위젯들을 사용하거나 CustomWidget을 생성하여 사용할 수 있다. (기본 제공 위젯은 Widgets 탭 참고)" margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="Custom widget" text-size="24px" margin="10px"></top-textview>
+    <top-textview text="Top.CustomWidget을 통해 기존 TOP 위젯들을 그룹화하여 사용하거나 외부 UI 라이브러리를 사용한다." margin="10px 10px 10px 20px"></top-textview>
+    <top-textview text="API" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="Top.CustomWidget.create(name, settings)" text-size="16px" margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="CustomWidget 생성" margin="0px 10px 10px 25px"></top-textview>
+    <top-textview text="name: 위젯명(String), settings: 속성(Object, 구성은 아래 표 참고)" margin="0px 10px 10px 25px"></top-textview>
+    <top-tableview items="frameworkData.framework_customwidget_create" margin="10px 10px 10px 25px"></top-tableview>
+    <top-textview text="Example" text-size="20px" margin="10px"></top-textview>
+    <top-textview text="CustomWidget은 앱이 로딩되기 전에 생성하기 위해 Top.App.onBeforeLoad에서 콜백으로 등록하여 사용한다. 다음 예제는 기존 TOP 위젯을 그릅화하는 방법과 외부 UI 라이브러리를 사용하는 방법이다." margin="0px 10px 10px 20px"></top-textview>
+    <top-textview text="기존 TOP 위젯 그룹화" text-size="16px" margin="0px 10px 0px 20px"></top-textview>
+    <top-textview text="기존 TOP 위젯인 top-textfield와 top-button을 그룹화하여 top-inputbutton을 생성한다." margin="10px 10px 0px 25px"></top-textview>
+    <top-textview text="예제의 getText와 같이 API를 추가할 수 있다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor read-only="true" theme="darcula" margin="10px 10px 10px 25px" text='Top.App.onBeforeLoad(function() {
+    Top.CustomWidget.create(&#x27;top-inputbutton&#x27;, {
+        template: &#x27;<top-textfield text={{textfield-text}}></top-textfield><top-button text={{button-text}} on-click={{on-click}} margin="5px"></top-button>&#x27;,
+        init: function() {
+
+        },
+        getText: function() {
+            return this.getChildren(&#x27;top-textfield&#x27;)[0].getText();
+        }
+    });
+});'></top-codeeditor>
+    <top-textview text="생성한 top-inputbutton은 html에서 다음과 같이 사용한다. 위에서 template을 정의할때 {{ }}으로 설정한 값은 CustomWidget의 해당 속성 값이 입력된다. 예를 들어, <top-inputbutton>의 textfield-text 속성 값은 <top-textfield>의 text에 입력된다." margin="10px 10px 0px 25px"></top-textview>
+    <top-textarea rows="1" layout-width="calc(100% - 41px)" margin="10px 10px 10px 25px" readonly="true" text='<top-inputbutton id="inputButton1" textfield-text="Tmax" button-text="Search" on-click="onBtnClick"></top-inputbutton>'></top-textarea>
+    <top-textview text="다음과 같이 CustomWidget 생성 시 정의한 API를 사용할 수 있다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor read-only="true" theme="darcula" margin="10px 10px 10px 25px" text='function onBtnClick() {
+    var text = Top.Dom.selectById("inputButton1").getText();
+    alert(text);
+}'></top-codeeditor>
+    <top-textview text="예제 실행 결과는 다음과 같다." margin="10px 10px 0px 25px"></top-textview>
+    <top-layout margin="10px 10px 10px 25px" border-width="0">
+        <top-inputbutton id="inputButton1" textfield-text="Tmax" button-text="Search" on-click="onBtnClick_inputButton1"></top-inputbutton>
+    </top-layout>
+    <top-textview text="외부 UI 라이브러리 사용 (jQuery draggable)" text-size="16px" margin="10px 10px 0px 20px"></top-textview>
+    <top-textview text="외부 UI 라이브러리인 jQuery draggable을 랩핑한 draggable-div를 생성한다. init 함수에서 해당 jQuery API를 사용하여 정의한다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor theme="darcula" margin="10px 10px 10px 25px" read-only="true" text='Top.App.onBeforeLoad(function() {
+    Top.CustomWidget.create(&#x27;draggable-div&#x27;, {
+        template: &#x27;<div style="background-color:{{background-color}}; width:{{layout-width}}; height:{{layout-height}}; padding:0.5em; font-size:initial;"><p>Drag me around</p></div>&#x27;,
+        init: function() {
+            $(this.template.querySelector("div")).draggable();
+        }
+    });
+});'></top-codeeditor>
+    <top-textview text="생성한 draggable-div은 html에서 다음과 같이 사용한다." margin="10px 10px 0px 25px"></top-textview>
+    <top-textarea rows="1" layout-width="calc(100% - 41px)" margin="10px 10px 10px 25px" readonly="true" text='<draggable-div background-color="gray" layout-width="150px" layout-height="150px"></draggable-div>'></top-textarea>
+    <top-textview text="예제 실행 결과는 다음과 같다." margin="10px 10px 0px 25px"></top-textview>
+    <top-layout margin="10px 10px 20px 25px" border-width="0">
+        <draggable-div background-color="gray" layout-width="150px" layout-height="150px"></draggable-div>
+    </top-layout>
+    <top-textview text="HTML 기본 태그 및 외부 UI 라이브러리 사용 (jQuery menu)" text-size="16px" margin="10px 10px 0px 20px"></top-textview>
+    <top-textview text="HTML 기본 태그인 <ul>, <li>를 사용하여 리스트를 구성하고, jQuery menu API를 통해 메뉴를 생성한다. 아래 예제와 같이 template은 외부 파일 경로로도 입력이 가능하다." margin="10px 10px 0px 25px"></top-textview>
+    <top-codeeditor theme="darcula" margin="10px 10px 10px 25px" read-only="true" text='Top.App.onBeforeLoad(function() {
+    Top.CustomWidget.create(&#x27;custom-menu&#x27;, {
+        template: &#x27;template.html&#x27;,
+        init: function() {
+            $(this.template.querySelector("#menu")).menu();
+        }
+    });
+});'></top-codeeditor>
+    <top-codeeditor theme="darcula" margin="10px 10px 10px 25px" read-only="true" text='<!-- template.html -->
+
+<style>
+.ui-menu {
+    width: 150px;
+    font-size: medium;
+}
+</style>
+<ul id="menu">
+    <li class="ui-state-disabled">
+        <div>Toys (n/a)</div>
+    </li>
+    <li>
+        <div>Books</div>
+    </li>
+    <li>
+        <div>Clothing</div>
+    </li>
+    <li>
+        <div>Electronics</div>
+        <ul>
+            <li class="ui-state-disabled">
+                <div>Home Entertainment</div>
+            </li>
+            <li>
+                <div>Car Hifi</div>
+            </li>
+            <li>
+                <div>Utilities</div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <div>Movies</div>
+    </li>
+    <li>
+        <div>Music</div>
+        <ul>
+            <li>
+                <div>Rock</div>
+                <ul>
+                    <li>
+                        <div>Alternative</div>
+                    </li>
+                    <li>
+                        <div>Classic</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Jazz</div>
+                <ul>
+                    <li>
+                        <div>Freejazz</div>
+                    </li>
+                    <li>
+                        <div>Big Band</div>
+                    </li>
+                    <li>
+                        <div>Modern</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Pop</div>
+            </li>
+        </ul>
+    </li>
+    <li class="ui-state-disabled">
+        <div>Specials (n/a)</div>
+    </li>
+</ul>'></top-codeeditor>
+    <top-textview text="생성한 custom-menu는 html에서 다음과 같이 사용한다." margin="10px 10px 0px 25px"></top-textview>
+    <top-textarea rows="1" layout-width="calc(100% - 41px)" margin="10px 10px 10px 25px" readonly="true" text='<custom-menu></custom-menu>'></top-textarea>
+    <top-textview text="예제 실행 결과는 다음과 같다." margin="10px 10px 0px 25px"></top-textview>
+    <top-layout margin="10px 10px 20px 25px" border-width="0">
+        <custom-menu></custom-menu>
+    </top-layout>
+</top-linearlayout>

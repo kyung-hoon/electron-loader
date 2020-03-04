@@ -1,0 +1,19 @@
+/*!
+ * top-flowlayout
+ */
+
+.top-flowlayout-root {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    position: relative;
+    overflow: hidden;
+    white-space: normal;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+}
+
+.flow-child {
+    line-height: normal;
+}

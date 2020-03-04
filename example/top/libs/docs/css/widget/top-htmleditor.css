@@ -1,0 +1,30 @@
+/*!
+ * top-htmleditor
+ */
+
+.top-htmleditor-root,
+.top-htmleditor-container {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 250px;
+}
+
+.top-htmleditor-container[disabled] {
+    background-color: #e9e9e9;
+    border-color: #cccccc;
+    box-shadow: 0 0 0px;
+}
+
+.top-htmleditor-container[disabled] .jqte_editor {
+    background-color: #e9e9e9;
+    pointer-events: none;
+}
+
+.top-htmleditor-container[disabled] .jqte_toolbar {
+    pointer-events: none;
+}
+
+top-htmleditor[disabled="true"] .top-htmleditor-container {
+    cursor: not-allowed !important;
+}

@@ -1,0 +1,74 @@
+<script>
+var line_data = [
+    {name:"A", data: [30, 20, 10, 20, 30, 40, 3]},
+    {name:"B", data: [40, 10, 60, 43, 36, 5, 22]}
+];
+var  line_option = {
+    title: {
+        text : "Line type Chart",
+        margin : {
+            bottom : 0
+        },
+        align:"center",
+
+    },
+    colors: ["#CC0000", "#3399FF"],
+};
+</script>
+<top-linearlayout orientation="vertical" border-width="0px">
+    <top-linearlayout border-width="0px" layout-width="match_parent" orientation="horizontal">
+        <top-panel title="type=line" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="line" series="line_data" option="line_option"></top-chart>
+        </top-panel>
+        <top-panel title="type=spline" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="spline" series="line_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=area" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="area" series="area_data"></top-chart>
+        </top-panel>
+    </top-linearLayout>
+    <top-linearlayout border-width="0px" layout-width="match_parent" orientation="horizontal">
+        <top-panel title="type=area-spline" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="area-spline" series="line_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=step" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="step" series="line_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=area-step" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="area-step" series="line_data"></top-chart>
+        </top-panel>
+    </top-linearlayout>
+    <top-linearlayout border-width="0px" layout-width="match_parent" orientation="horizontal">
+        <top-panel title="type=circulargauge" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="circulargauge" series="circular_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=bargauge" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="bargauge" series="bar_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=columngauge" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="columngauge" series="column_data"></top-chart>
+        </top-panel>
+    </top-linearlayout>
+    <top-linearlayout border-width="0px" layout-width="match_parent" orientation="horizontal">
+        <top-panel title="type=donut" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="donut" series="donut_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=pie" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="pie" series="donut_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=angulargauge" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="angulargauge" series="column_data"></top-chart>
+        </top-panel>
+    </top-linearlayout>
+    <top-linearlayout border-width="0px" layout-width="match_parent" orientation="horizontal">
+        <top-panel title="type=bar" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="bar" series="line_data"></top-chart>
+        </top-panel>
+        <top-panel title="type=column" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="column" series="line_data" option="column_option"></top-chart>
+        </top-panel>
+        <top-panel title="type=scatter" padding="0px 0px 0px 0px" layout-height="300px" margin="0px 1px 1px 0px" layout-width="33%">
+            <top-chart type="scatter" series="scatter_data" option="scatter_option"></top-chart>
+        </top-panel>
+    </top-linearlayout>
+</top-linearlayout>
