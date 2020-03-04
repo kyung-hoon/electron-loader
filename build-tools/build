@@ -71,7 +71,11 @@ with open('package.json', 'w') as make_file:
 os.system("yarn add electron --dev")
 
 # make 'index.js'
-shutil.copy(ELECTRON_MAIN_JS_PATH, OUTPUT_PATH)
+if BUILDTYPE == "debug":
+  shutil.copy(ELECTRON_MAIN_JS_PATH.replace("index.js","index_debug.js"), OUTPUT_PATH)
+else:
+  shutil.copy(ELECTRON_MAIN_JS_PATH, OUTPUT_PATH)
+
 shutil.copy(ELECTRON_ICON_PATH, OUTPUT_PATH)
 # os.symlink(ELECTRON_ICON_PATH, OUTPUT_PATH)
 
